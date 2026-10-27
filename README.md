@@ -5,7 +5,7 @@
   <img src="./assets/hero-light.svg" width="100%" alt="M Akshay Sharma — Data Analytics Specialist · Full-Stack Developer">
 </picture>
 
-**[GitHub](https://github.com/akshaysharma2005)** &nbsp;·&nbsp; **[LinkedIn](https://www.linkedin.com/in/m-akshay-sharma)** &nbsp;·&nbsp; **[Email](mailto:akshaysharma200508@gmail.com)** &nbsp;·&nbsp; **[Resume](mailto:akshaysharma200508@gmail.com)**
+**[GitHub](https://github.com/akshaysharma2005)** &nbsp;·&nbsp; **[LinkedIn](https://www.linkedin.com/in/m-akshay-sharma-a7414b367/)** &nbsp;·&nbsp; **[Email](mailto:akshaysharma200508@gmail.com)** &nbsp;·&nbsp; **[Resume](https://drive.google.com/file/d/1kAvZECBbI3gPE6oZu3TbyU5W4GwPmVf-/view?usp=sharing)**
 
 </div>
 
