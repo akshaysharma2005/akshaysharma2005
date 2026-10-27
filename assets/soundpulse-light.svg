@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="210" viewBox="0 0 600 210" role="img" aria-label="SoundPulse — Music Streaming Analytics">
+<style>
+@keyframes sweep{0%{transform:translateX(-120px)}60%,100%{transform:translateX(720px)}}
+@keyframes live{0%,100%{opacity:1}50%{opacity:.35}}
+.sweep{animation:sweep 6s ease-in-out infinite}
+.live{animation:live 1.6s ease-in-out infinite}
+</style>
+<defs>
+<linearGradient id="bar" x1="0" x2="1"><stop offset="0" stop-color="#059669"/><stop offset="1" stop-color="#059669" stop-opacity="0"/></linearGradient>
+<linearGradient id="shine" x1="0" x2="1"><stop offset="0" stop-color="#059669" stop-opacity="0"/><stop offset=".5" stop-color="#059669" stop-opacity=".06"/><stop offset="1" stop-color="#059669" stop-opacity="0"/></linearGradient>
+<clipPath id="c"><rect x="1" y="1" width="598" height="208" rx="18"/></clipPath>
+</defs>
+<g clip-path="url(#c)">
+<rect width="600" height="210" fill="#ffffff"/>
+<rect class="sweep" x="0" y="0" width="120" height="210" fill="url(#shine)"/>
+<rect x="28" y="0" width="64" height="1.5" fill="#059669"/>
+</g>
+<rect x="0.5" y="0.5" width="599" height="209" rx="18" fill="none" stroke="#e2e8f0"/>
+<text x="28" y="54" font-family="'Iowan Old Style', 'Palatino Linotype', Palatino, 'Book Antiqua', Georgia, serif" font-size="27" font-weight="400" letter-spacing="-0.3" fill="#0f172a">SoundPulse</text>
+<rect x="466" y="34" width="106" height="26" rx="13" fill="none" stroke="#cbd5e1"/>
+<circle class="live" cx="480" cy="47" r="3" fill="#059669"/>
+<text x="490" y="51.5" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="12" fill="#475569">Live Demo</text>
+<text y="92" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="15" fill="#475569">
+<tspan x="28" dy="0">Music streaming analytics platform processing 8,000+ events</tspan>
+<tspan x="28" dy="22">across 97 users &amp; 5,100+ songs with 10+ complex SQL queries.</tspan>
+</text>
+<rect x="28" y="140" width="54" height="28" rx="14" fill="#f8fafc" stroke="#e2e8f0"/><text x="41" y="158.5" font-family="ui-monospace, SFMono-Regular, monospace" font-size="12" fill="#475569">SQL</text>
+<rect x="88.2" y="140" width="144" height="28" rx="14" fill="#f8fafc" stroke="#e2e8f0"/><text x="101.2" y="158.5" font-family="ui-monospace, SFMono-Regular, monospace" font-size="12" fill="#475569">Window Functions</text>
+<rect x="238.4" y="140" width="82" height="28" rx="14" fill="#f8fafc" stroke="#e2e8f0"/><text x="251.4" y="158.5" font-family="ui-monospace, SFMono-Regular, monospace" font-size="12" fill="#475569">Chart.js</text>
+<rect x="326.6" y="140" width="116" height="28" rx="14" fill="#f8fafc" stroke="#e2e8f0"/><text x="339.6" y="158.5" font-family="ui-monospace, SFMono-Regular, monospace" font-size="12" fill="#475569">KPI Dashboard</text>
+<rect x="448.8" y="140" width="70" height="28" rx="14" fill="#f8fafc" stroke="#e2e8f0"/><text x="461.8" y="158.5" font-family="ui-monospace, SFMono-Regular, monospace" font-size="12" fill="#475569">Render</text>
+<text x="572" y="188" text-anchor="end" font-family="ui-monospace, SFMono-Regular, monospace" font-size="11.5" fill="#64748b">github.com/akshaysharma2005/SoundPulse ↗</text>
+</svg>

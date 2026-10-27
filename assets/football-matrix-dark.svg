@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="300" viewBox="0 0 1280 300" role="img" aria-label="Football Analytics Lab — Tactical Matrix, xG Engine, and Player Radar">
+<style>
+@keyframes sweep{0%{transform:translateX(-140px)}60%,100%{transform:translateX(1420px)}}
+@keyframes live{0%,100%{opacity:1}50%{opacity:.35}}
+@keyframes pulse{0%,100%{transform:scale(1);opacity:0.9}50%{transform:scale(1.08);opacity:0.4}}
+.sweep{animation:sweep 7s ease-in-out infinite}
+.live{animation:live 1.6s ease-in-out infinite}
+.p-dot{animation:pulse 2s ease-in-out infinite}
+</style>
+<defs>
+<linearGradient id="shineF" x1="0" x2="1">
+  <stop offset="0" stop-color="#10b981" stop-opacity="0"/>
+  <stop offset=".5" stop-color="#10b981" stop-opacity=".05"/>
+  <stop offset="1" stop-color="#10b981" stop-opacity="0"/>
+</linearGradient>
+<clipPath id="fclip">
+  <rect x="1" y="1" width="1278" height="298" rx="18"/>
+</clipPath>
+</defs>
+
+<!-- Background -->
+<g clip-path="url(#fclip)">
+  <rect width="1280" height="300" fill="#090e14"/>
+  <rect class="sweep" x="0" y="0" width="140" height="300" fill="url(#shineF)"/>
+</g>
+<rect x="0.5" y="0.5" width="1279" height="299" rx="18" fill="none" stroke="#1e2c3d"/>
+
+<!-- Card Header -->
+<circle class="live" cx="44" cy="40" r="3.5" fill="#10b981"/>
+<text x="58" y="44" font-family="ui-monospace, SFMono-Regular, monospace" font-size="12" letter-spacing="1.2" fill="#64748b">
+  FOOTBALL ANALYTICS LAB · TACTICAL MATRIX &amp; xG ENGINE
+</text>
+<text x="1236" y="44" text-anchor="end" font-family="ui-monospace, SFMono-Regular, monospace" font-size="12" fill="#10b981">
+  ⚽ POSSESSION · HIGH-PRESSING · SPATIAL THREAT
+</text>
+<line x1="40" x2="1240" y1="64" y2="64" stroke="#1e2c3d"/>
+
+<!-- 3 Columns Layout -->
+
+<!-- Column 1: Positional Play & Formation -->
+<g transform="translate(48, 86)">
+  <rect width="360" height="184" rx="12" fill="#0d1520" stroke="#1c2d3e"/>
+  <text x="20" y="32" font-family="'Iowan Old Style', Palatino, serif" font-size="18" fill="#f1f5f9">Positional Play &amp; Passing</text>
+  <text x="20" y="52" font-family="ui-monospace, SFMono-Regular, monospace" font-size="11.5" fill="#64748b">SYSTEM: 4-3-3 FLUID POSSESSION</text>
+
+  <!-- Metric 1 -->
+  <text x="20" y="86" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" fill="#94a3b8">Field Tilt (Territorial Dominance)</text>
+  <text x="340" y="86" text-anchor="end" font-family="ui-monospace, monospace" font-size="13" font-weight="600" fill="#34d399">68.4%</text>
+  <rect x="20" y="94" width="320" height="6" rx="3" fill="#16222f"/>
+  <rect x="20" y="94" width="218" height="6" rx="3" fill="#10b981"/>
+
+  <!-- Metric 2 -->
+  <text x="20" y="126" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" fill="#94a3b8">Pass Completion in Opp. Half</text>
+  <text x="340" y="126" text-anchor="end" font-family="ui-monospace, monospace" font-size="13" font-weight="600" fill="#38bdf8">89.2%</text>
+  <rect x="20" y="134" width="320" height="6" rx="3" fill="#16222f"/>
+  <rect x="20" y="134" width="285" height="6" rx="3" fill="#38bdf8"/>
+
+  <!-- Metric 3 -->
+  <text x="20" y="164" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#64748b">Half-Space Overloads · Inverted Wings · Rest Defense</text>
+</g>
+
+<!-- Column 2: Expected Metrics (xG & xT) Engine -->
+<g transform="translate(456, 86)">
+  <rect width="368" height="184" rx="12" fill="#0d1520" stroke="#1c2d3e"/>
+  <text x="20" y="32" font-family="'Iowan Old Style', Palatino, serif" font-size="18" fill="#f1f5f9">Expected Goals (xG) Engine</text>
+  <text x="20" y="52" font-family="ui-monospace, SFMono-Regular, monospace" font-size="11.5" fill="#64748b">STATISTICAL SHOT MODELING &amp; xT</text>
+
+  <!-- Metric 1 -->
+  <text x="20" y="86" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" fill="#94a3b8">Shot Quality (xG per 90')</text>
+  <text x="348" y="86" text-anchor="end" font-family="ui-monospace, monospace" font-size="13" font-weight="600" fill="#fbbf24">2.48 <tspan font-size="11" fill="#64748b">(Top 3%)</tspan></text>
+  <rect x="20" y="94" width="328" height="6" rx="3" fill="#16222f"/>
+  <rect x="20" y="94" width="298" height="6" rx="3" fill="#fbbf24"/>
+
+  <!-- Metric 2 -->
+  <text x="20" y="126" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" fill="#94a3b8">PPDA (Pressing Intensity)</text>
+  <text x="348" y="126" text-anchor="end" font-family="ui-monospace, monospace" font-size="13" font-weight="600" fill="#f43f5e">7.8 passes</text>
+  <rect x="20" y="134" width="328" height="6" rx="3" fill="#16222f"/>
+  <rect x="20" y="134" width="270" height="6" rx="3" fill="#f43f5e"/>
+
+  <!-- Metric 3 -->
+  <text x="20" y="164" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#64748b">Monte Carlo Sim · Logistic Regression on 15k+ Shots</text>
+</g>
+
+<!-- Column 3: Playmaker Radar & Analytical Mindset -->
+<g transform="translate(872, 86)">
+  <rect width="360" height="184" rx="12" fill="#0d1520" stroke="#1c2d3e"/>
+  <text x="20" y="32" font-family="'Iowan Old Style', Palatino, serif" font-size="18" fill="#f1f5f9">The Playmaker Mindset</text>
+  <text x="20" y="52" font-family="ui-monospace, SFMono-Regular, monospace" font-size="11.5" fill="#64748b">SPATIAL VISION &amp; DATA INTELLECT</text>
+
+  <!-- Skill Attributes -->
+  <g transform="translate(20, 72)">
+    <rect x="0" y="0" width="150" height="34" rx="8" fill="#131e2b" stroke="#1e2c3d"/>
+    <text x="12" y="22" font-family="ui-monospace, monospace" font-size="11.5" fill="#94a3b8">Spatial IQ: <tspan fill="#34d399" font-weight="600">96</tspan></text>
+
+    <rect x="164" y="0" width="156" height="34" rx="8" fill="#131e2b" stroke="#1e2c3d"/>
+    <text x="176" y="22" font-family="ui-monospace, monospace" font-size="11.5" fill="#94a3b8">Press Res.: <tspan fill="#38bdf8" font-weight="600">94</tspan></text>
+
+    <rect x="0" y="44" width="150" height="34" rx="8" fill="#131e2b" stroke="#1e2c3d"/>
+    <text x="12" y="66" font-family="ui-monospace, monospace" font-size="11.5" fill="#94a3b8">Key Passes: <tspan fill="#fbbf24" font-weight="600">93</tspan></text>
+
+    <rect x="164" y="44" width="156" height="34" rx="8" fill="#131e2b" stroke="#1e2c3d"/>
+    <text x="176" y="66" font-family="ui-monospace, monospace" font-size="11.5" fill="#94a3b8">Match Tempo: <tspan fill="#a78bfa" font-weight="600">95</tspan></text>
+  </g>
+
+  <text x="20" y="164" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#64748b">
+    Translating football vision into clean algorithms &amp; data models.
+  </text>
+</g>
+</svg>

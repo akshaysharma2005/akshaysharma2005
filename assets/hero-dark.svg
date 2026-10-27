@@ -1,0 +1,198 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="420" viewBox="0 0 1280 420" role="img" aria-label="M Akshay Sharma — Data Analytics Specialist and Full-Stack Developer">
+<style>
+@keyframes drift1{0%,100%{transform:translate(0,0)}50%{transform:translate(50px,25px)}}
+@keyframes word{0%{opacity:0;transform:translateY(6px)}4%,22%{opacity:1;transform:none}26%,100%{opacity:0;transform:translateY(-6px)}}
+@keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+@keyframes live{0%,100%{opacity:1}50%{opacity:.3}}
+@keyframes ringPulse{0%{r:4;opacity:0.9}100%{r:14;opacity:0}}
+@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.g1{animation:drift1 15s ease-in-out infinite}
+.w0{animation:word 12s infinite;animation-delay:0.0s;opacity:0}
+.w1{animation:word 12s infinite;animation-delay:3.0s;opacity:0}
+.w2{animation:word 12s infinite;animation-delay:6.0s;opacity:0}
+.w3{animation:word 12s infinite;animation-delay:9.0s;opacity:0}
+.cur{animation:blink 1s step-end infinite}
+.live{animation:live 1.6s ease-in-out infinite}
+.pulse-ring{animation:ringPulse 2s cubic-bezier(0, 0.2, 0.8, 1) infinite}
+.r1{animation:rise .8s ease-out both}
+.r2{animation:rise .8s .15s ease-out both}
+.r3{animation:rise .8s .3s ease-out both}
+.r4{animation:rise .8s .45s ease-out both}
+.r5{animation:rise .8s .6s ease-out both}
+</style>
+<defs>
+<pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+  <path d="M32 0H0V32" fill="none" stroke="#16222f" stroke-width="1"/>
+</pattern>
+<radialGradient id="fade" cx="72%" cy="50%" r="65%">
+  <stop offset="0" stop-color="#fff"/>
+  <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+</radialGradient>
+<mask id="m">
+  <rect width="1280" height="420" fill="url(#fade)"/>
+</mask>
+<filter id="blur" x="-50%" y="-50%" width="200%" height="200%">
+  <feGaussianBlur stdDeviation="70"/>
+</filter>
+<filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+  <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+  <feMerge>
+    <feMergeNode in="coloredBlur"/>
+    <feMergeNode in="SourceGraphic"/>
+  </feMerge>
+</filter>
+<linearGradient id="pitchGrad" x1="0" y1="0" x2="1" y2="1">
+  <stop offset="0" stop-color="#0b1720"/>
+  <stop offset="1" stop-color="#061017"/>
+</linearGradient>
+<clipPath id="clip">
+  <rect x="1" y="1" width="1278" height="418" rx="22"/>
+</clipPath>
+</defs>
+
+<!-- Background -->
+<g clip-path="url(#clip)">
+  <rect width="1280" height="420" fill="#080c10"/>
+  <rect width="1280" height="420" fill="url(#grid)" mask="url(#m)"/>
+  <circle class="g1" cx="1020" cy="140" r="220" fill="#10b981" opacity="0.12" filter="url(#blur)"/>
+  <circle class="g1" cx="800" cy="300" r="160" fill="#0284c7" opacity="0.08" filter="url(#blur)"/>
+</g>
+<rect x="0.5" y="0.5" width="1279" height="419" rx="22" fill="none" stroke="#1e2c3d"/>
+
+<!-- Left Column: Identity -->
+<g class="r1">
+  <circle class="live" cx="68" cy="80" r="3.5" fill="#10b981"/>
+  <text x="82" y="85" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="14" fill="#64748b">~/akshaysharma2005</text>
+</g>
+
+<text class="r2" x="62" y="156" font-family="'Iowan Old Style', 'Palatino Linotype', Palatino, 'Book Antiqua', Georgia, serif" font-size="54" font-weight="400" letter-spacing="-1.2" fill="#f1f5f9">M Akshay Sharma</text>
+
+<text class="r3" x="64" y="202" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="21" font-weight="400" letter-spacing="0.2" fill="#94a3b8">
+  <tspan fill="#f1f5f9" font-weight="500">Data Analytics Specialist</tspan>
+  <tspan fill="#10b981">  /  </tspan>
+  Full-Stack Developer
+</text>
+
+<g class="r4">
+  <text x="64" y="268" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="17" fill="#64748b">
+    <tspan fill="#10b981">$</tspan> now analyzing
+  </text>
+  <text class="w0" x="234" y="268" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="17" fill="#f1f5f9">
+    SoundPulse Streams<tspan class="cur" fill="#10b981">▍</tspan>
+  </text>
+  <text class="w1" x="234" y="268" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="17" fill="#f1f5f9">
+    Football xG &amp; Tactics ⚽<tspan class="cur" fill="#10b981">▍</tspan>
+  </text>
+  <text class="w2" x="234" y="268" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="17" fill="#f1f5f9">
+    Healthcare HMIS Patterns<tspan class="cur" fill="#10b981">▍</tspan>
+  </text>
+  <text class="w3" x="234" y="268" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="17" fill="#f1f5f9">
+    MERN &amp; AWS Scalability<tspan class="cur" fill="#10b981">▍</tspan>
+  </text>
+</g>
+
+<!-- Profile Badges -->
+<g class="r5">
+  <!-- Badge 1: University -->
+  <rect x="64" y="322" width="220" height="28" rx="14" fill="#0f1923" stroke="#1e2c3d"/>
+  <text x="78" y="340.5" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="12.5" fill="#94a3b8">CSE (Data Analytics) · VIT-AP</text>
+  
+  <!-- Badge 2: AWS -->
+  <rect x="296" y="322" width="206" height="28" rx="14" fill="#0f1923" stroke="#1e2c3d"/>
+  <text x="310" y="340.5" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="12.5" fill="#94a3b8">AWS Academy Graduate</text>
+
+  <!-- Badge 3: Football -->
+  <rect x="514" y="322" width="168" height="28" rx="14" fill="#0f211b" stroke="#10b981" stroke-opacity="0.4"/>
+  <text x="528" y="340.5" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="12.5" fill="#34d399">⚽ Football Analytics</text>
+</g>
+
+<!-- Right Column: Interactive Tactical Football Analytics Pitch -->
+<g class="r3">
+  <!-- Telemetry Header -->
+  <text x="736" y="85" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="12" letter-spacing="1.2" fill="#64748b">MATCHDAY TELEMETRY · PASSING MATRIX</text>
+  <circle class="live" cx="1196" cy="81" r="3.5" fill="#10b981"/>
+  <text x="1186" y="85" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="12" fill="#10b981">LIVE 90'+3</text>
+
+  <!-- Pitch Container -->
+  <rect x="736" y="104" width="476" height="240" rx="14" fill="url(#pitchGrad)" stroke="#1a2b3c"/>
+
+  <!-- Grass Bands (Subtle alternations) -->
+  <rect x="795" y="105" width="59" height="238" fill="#ffffff" opacity="0.015"/>
+  <rect x="913" y="105" width="59" height="238" fill="#ffffff" opacity="0.015"/>
+  <rect x="1031" y="105" width="59" height="238" fill="#ffffff" opacity="0.015"/>
+
+  <!-- Pitch Boundary -->
+  <rect x="752" y="118" width="444" height="212" rx="4" fill="none" stroke="#253a50" stroke-width="1.4"/>
+
+  <!-- Halfway Line & Center Circle -->
+  <line x1="974" y1="118" x2="974" y2="330" stroke="#253a50" stroke-width="1.4"/>
+  <circle cx="974" cy="224" r="38" fill="none" stroke="#253a50" stroke-width="1.4"/>
+  <circle cx="974" cy="224" r="2.5" fill="#10b981"/>
+
+  <!-- Left Penalty Area -->
+  <rect x="752" y="152" width="68" height="144" fill="none" stroke="#253a50" stroke-width="1.4"/>
+  <rect x="752" y="186" width="26" height="76" fill="none" stroke="#253a50" stroke-width="1.2"/>
+  <circle cx="802" cy="224" r="2" fill="#253a50"/>
+  <path d="M 820 198 A 38 38 0 0 1 820 250" fill="none" stroke="#253a50" stroke-width="1.2"/>
+
+  <!-- Right Penalty Area (Attacking Box) -->
+  <rect x="1128" y="152" width="68" height="144" fill="none" stroke="#253a50" stroke-width="1.4"/>
+  <rect x="1170" y="186" width="26" height="76" fill="none" stroke="#253a50" stroke-width="1.2"/>
+  <circle cx="1146" cy="224" r="2" fill="#253a50"/>
+  <path d="M 1128 198 A 38 38 0 0 0 1128 250" fill="none" stroke="#253a50" stroke-width="1.2"/>
+
+  <!-- Corner Arcs -->
+  <path d="M 752 128 A 10 10 0 0 1 762 118" fill="none" stroke="#253a50" stroke-width="1.2"/>
+  <path d="M 752 320 A 10 10 0 0 0 762 330" fill="none" stroke="#253a50" stroke-width="1.2"/>
+  <path d="M 1186 118 A 10 10 0 0 1 1196 128" fill="none" stroke="#253a50" stroke-width="1.2"/>
+  <path d="M 1186 330 A 10 10 0 0 0 1196 320" fill="none" stroke="#253a50" stroke-width="1.2"/>
+
+  <!-- Tactical Passing Network (Dashed attack line) -->
+  <path id="passPath" d="M 845 265 L 945 170 L 1055 162 L 1152 224" fill="none" stroke="#10b981" stroke-width="2" stroke-dasharray="4 5" opacity="0.6"/>
+
+  <!-- Ball Glow & Animated Motion -->
+  <circle r="4" fill="#ffffff" filter="url(#glow)">
+    <animateMotion dur="3.8s" repeatCount="indefinite" path="M 845 265 L 945 170 L 1055 162 L 1152 224"/>
+  </circle>
+  <circle r="2" fill="#34d399">
+    <animateMotion dur="3.8s" begin="0.12s" repeatCount="indefinite" path="M 845 265 L 945 170 L 1055 162 L 1152 224"/>
+  </circle>
+
+  <!-- Node 1: CDM (Pivot) -->
+  <g transform="translate(845, 265)">
+    <circle class="pulse-ring" cx="0" cy="0" r="4" fill="none" stroke="#10b981" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="5" fill="#10b981"/>
+    <rect x="-38" y="10" width="76" height="20" rx="10" fill="#081018" stroke="#1e2c3d" opacity="0.95"/>
+    <text x="0" y="24" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, monospace" font-size="10.5" fill="#94a3b8">CDM · 94%</text>
+  </g>
+
+  <!-- Node 2: CAM (Half-space Playmaker) -->
+  <g transform="translate(945, 170)">
+    <circle class="pulse-ring" cx="0" cy="0" r="4" fill="none" stroke="#38bdf8" stroke-width="1.5" style="animation-delay: 0.95s;"/>
+    <circle cx="0" cy="0" r="5" fill="#38bdf8"/>
+    <rect x="-44" y="-28" width="88" height="20" rx="10" fill="#081018" stroke="#1e2c3d" opacity="0.95"/>
+    <text x="0" y="-14" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, monospace" font-size="10.5" fill="#38bdf8">xT +0.38 · CAM</text>
+  </g>
+
+  <!-- Node 3: RW (Inverted Winger) -->
+  <g transform="translate(1055, 162)">
+    <circle class="pulse-ring" cx="0" cy="0" r="4" fill="none" stroke="#10b981" stroke-width="1.5" style="animation-delay: 1.9s;"/>
+    <circle cx="0" cy="0" r="5" fill="#10b981"/>
+    <rect x="-42" y="-28" width="84" height="20" rx="10" fill="#081018" stroke="#1e2c3d" opacity="0.95"/>
+    <text x="0" y="-14" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, monospace" font-size="10.5" fill="#34d399">Key Pass · RW</text>
+  </g>
+
+  <!-- Node 4: ST (Striker / xG Box) -->
+  <g transform="translate(1152, 224)">
+    <circle class="pulse-ring" cx="0" cy="0" r="4" fill="none" stroke="#fbbf24" stroke-width="1.5" style="animation-delay: 2.85s;"/>
+    <circle cx="0" cy="0" r="6" fill="#fbbf24"/>
+    <rect x="-46" y="10" width="92" height="20" rx="10" fill="#141108" stroke="#fbbf24" stroke-opacity="0.5" opacity="0.95"/>
+    <text x="0" y="24" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, monospace" font-size="10.5" fill="#fbbf24">xG 0.82 ⚽</text>
+  </g>
+
+  <!-- Pitch Telemetry Legend -->
+  <text x="736" y="365" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="11.5" fill="#64748b">
+    spatial event tracking · pass probability engine · expected goals (xG)
+  </text>
+</g>
+</svg>
