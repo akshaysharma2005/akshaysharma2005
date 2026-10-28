@@ -1,8 +1,8 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/hero-dark-v2.svg">
-  <img src="./assets/hero-light-v2.svg" width="100%" alt="M Akshay Sharma — Data Analytics Specialist · Full-Stack Developer">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/hero-dark-3d.svg">
+  <img src="./assets/hero-light-3d.svg" width="100%" alt="M Akshay Sharma — Data Analytics Specialist · Full-Stack Developer">
 </picture>
 
 **[GitHub](https://github.com/akshaysharma2005)** &nbsp;·&nbsp; **[LinkedIn](https://www.linkedin.com/in/m-akshay-sharma-a7414b367/)** &nbsp;·&nbsp; **[Email](mailto:akshaysharma200508@gmail.com)** &nbsp;·&nbsp; **[Resume](https://drive.google.com/file/d/1kAvZECBbI3gPE6oZu3TbyU5W4GwPmVf-/view?usp=sharing)**
@@ -25,8 +25,8 @@ Passionate **football tactician and sports analytics enthusiast** — dissecting
 ### The Beautiful Game · Football Analytics
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/football-matrix-dark-v2.svg">
-  <img src="./assets/football-matrix-light-v2.svg" width="100%" alt="Football Analytics Lab — Tactical Matrix, xG Engine, and Playmaker Mindset">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/football-matrix-dark-3d.svg">
+  <img src="./assets/football-matrix-light-3d.svg" width="100%" alt="Football Analytics Lab — Tactical Matrix, xG Engine, and Playmaker Mindset">
 </picture>
 
 <br/>
