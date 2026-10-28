@@ -2,32 +2,63 @@
 <style>
 @keyframes sweep{0%{transform:translateX(-120px)}60%,100%{transform:translateX(720px)}}
 @keyframes live{0%,100%{opacity:1}50%{opacity:.35}}
+@keyframes eq1{0%,100%{height:5px;y:19px}50%{height:20px;y:4px}}
+@keyframes eq2{0%,100%{height:18px;y:6px}50%{height:7px;y:17px}}
+@keyframes eq3{0%,100%{height:8px;y:16px}50%{height:22px;y:2px}}
+@keyframes eq4{0%,100%{height:20px;y:4px}50%{height:10px;y:14px}}
+@keyframes eq5{0%,100%{height:12px;y:12px}50%{height:21px;y:3px}}
 .sweep{animation:sweep 6s ease-in-out infinite}
 .live{animation:live 1.6s ease-in-out infinite}
+.b1{animation:eq1 .9s ease-in-out infinite}
+.b2{animation:eq2 1.1s ease-in-out infinite}
+.b3{animation:eq3 .8s ease-in-out infinite}
+.b4{animation:eq4 1.2s ease-in-out infinite}
+.b5{animation:eq5 1.0s ease-in-out infinite}
+.card{transition:all .3s ease;cursor:pointer}
+.card:hover{stroke:#10b981;filter:drop-shadow(0 0 12px rgba(16,185,129,0.25))}
 </style>
 <defs>
 <linearGradient id="bar" x1="0" x2="1"><stop offset="0" stop-color="#10b981"/><stop offset="1" stop-color="#10b981" stop-opacity="0"/></linearGradient>
-<linearGradient id="shine" x1="0" x2="1"><stop offset="0" stop-color="#10b981" stop-opacity="0"/><stop offset=".5" stop-color="#10b981" stop-opacity=".06"/><stop offset="1" stop-color="#10b981" stop-opacity="0"/></linearGradient>
+<linearGradient id="shine" x1="0" x2="1"><stop offset="0" stop-color="#10b981" stop-opacity="0"/><stop offset=".5" stop-color="#10b981" stop-opacity=".08"/><stop offset="1" stop-color="#10b981" stop-opacity="0"/></linearGradient>
 <clipPath id="c"><rect x="1" y="1" width="598" height="208" rx="18"/></clipPath>
 </defs>
 <g clip-path="url(#c)">
-<rect width="600" height="210" fill="#0c1219"/>
+<rect width="600" height="210" fill="#0b1118"/>
 <rect class="sweep" x="0" y="0" width="120" height="210" fill="url(#shine)"/>
-<rect x="28" y="0" width="64" height="1.5" fill="#10b981"/>
+<rect x="28" y="0" width="70" height="2" fill="#10b981"/>
 </g>
-<rect x="0.5" y="0.5" width="599" height="209" rx="18" fill="none" stroke="#1e2c3d"/>
-<text x="28" y="54" font-family="'Iowan Old Style', 'Palatino Linotype', Palatino, 'Book Antiqua', Georgia, serif" font-size="27" font-weight="400" letter-spacing="-0.3" fill="#f1f5f9">SoundPulse</text>
-<rect x="466" y="34" width="106" height="26" rx="13" fill="none" stroke="#1e2c3d"/>
-<circle class="live" cx="480" cy="47" r="3" fill="#10b981"/>
-<text x="490" y="51.5" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="12" fill="#94a3b8">Live Demo</text>
-<text y="92" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="15" fill="#94a3b8">
+<rect class="card" x="0.5" y="0.5" width="599" height="209" rx="18" fill="none" stroke="#1e2c3d"/>
+
+<!-- Title -->
+<text x="28" y="52" font-family="'Iowan Old Style', 'Palatino Linotype', Palatino, serif" font-size="27" font-weight="400" letter-spacing="-0.3" fill="#f1f5f9">SoundPulse</text>
+
+<!-- Live Audio Equalizer Waveform Animation -->
+<g transform="translate(365, 34)">
+  <rect class="b1" x="0" y="19" width="3.5" height="5" rx="1.75" fill="#10b981"/>
+  <rect class="b2" x="7" y="6" width="3.5" height="18" rx="1.75" fill="#34d399"/>
+  <rect class="b3" x="14" y="16" width="3.5" height="8" rx="1.75" fill="#10b981"/>
+  <rect class="b4" x="21" y="4" width="3.5" height="20" rx="1.75" fill="#38bdf8"/>
+  <rect class="b5" x="28" y="12" width="3.5" height="12" rx="1.75" fill="#10b981"/>
+  <text x="42" y="18" font-family="ui-monospace, monospace" font-size="11" fill="#64748b">STREAM LIVE</text>
+</g>
+
+<!-- Status Pill -->
+<rect x="480" y="32" width="94" height="26" rx="13" fill="#081b15" stroke="#10b981" stroke-opacity="0.4"/>
+<circle class="live" cx="494" cy="45" r="3" fill="#10b981"/>
+<text x="504" y="49.5" font-family="ui-monospace, monospace" font-size="11.5" font-weight="600" fill="#34d399">Live Demo</text>
+
+<!-- Description -->
+<text y="92" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="14.5" fill="#94a3b8">
 <tspan x="28" dy="0">Music streaming analytics platform processing 8,000+ events</tspan>
 <tspan x="28" dy="22">across 97 users &amp; 5,100+ songs with 10+ complex SQL queries.</tspan>
 </text>
-<rect x="28" y="140" width="54" height="28" rx="14" fill="#0f1923" stroke="#1e2c3d"/><text x="41" y="158.5" font-family="ui-monospace, SFMono-Regular, monospace" font-size="12" fill="#94a3b8">SQL</text>
-<rect x="88.2" y="140" width="144" height="28" rx="14" fill="#0f1923" stroke="#1e2c3d"/><text x="101.2" y="158.5" font-family="ui-monospace, SFMono-Regular, monospace" font-size="12" fill="#94a3b8">Window Functions</text>
-<rect x="238.4" y="140" width="82" height="28" rx="14" fill="#0f1923" stroke="#1e2c3d"/><text x="251.4" y="158.5" font-family="ui-monospace, SFMono-Regular, monospace" font-size="12" fill="#94a3b8">Chart.js</text>
-<rect x="326.6" y="140" width="116" height="28" rx="14" fill="#0f1923" stroke="#1e2c3d"/><text x="339.6" y="158.5" font-family="ui-monospace, SFMono-Regular, monospace" font-size="12" fill="#94a3b8">KPI Dashboard</text>
-<rect x="448.8" y="140" width="70" height="28" rx="14" fill="#0f1923" stroke="#1e2c3d"/><text x="461.8" y="158.5" font-family="ui-monospace, SFMono-Regular, monospace" font-size="12" fill="#94a3b8">Render</text>
-<text x="572" y="188" text-anchor="end" font-family="ui-monospace, SFMono-Regular, monospace" font-size="11.5" fill="#64748b">github.com/akshaysharma2005/SoundPulse ↗</text>
+
+<!-- Tech Badges -->
+<rect x="28" y="140" width="54" height="28" rx="14" fill="#0f1923" stroke="#1e2c3d"/><text x="41" y="158.5" font-family="ui-monospace, monospace" font-size="12" fill="#94a3b8">SQL</text>
+<rect x="88.2" y="140" width="144" height="28" rx="14" fill="#0f1923" stroke="#1e2c3d"/><text x="101.2" y="158.5" font-family="ui-monospace, monospace" font-size="12" fill="#94a3b8">Window Functions</text>
+<rect x="238.4" y="140" width="82" height="28" rx="14" fill="#0f1923" stroke="#1e2c3d"/><text x="251.4" y="158.5" font-family="ui-monospace, monospace" font-size="12" fill="#94a3b8">Chart.js</text>
+<rect x="326.6" y="140" width="116" height="28" rx="14" fill="#0f1923" stroke="#1e2c3d"/><text x="339.6" y="158.5" font-family="ui-monospace, monospace" font-size="12" fill="#94a3b8">KPI Dashboard</text>
+<rect x="448.8" y="140" width="70" height="28" rx="14" fill="#0f1923" stroke="#1e2c3d"/><text x="461.8" y="158.5" font-family="ui-monospace, monospace" font-size="12" fill="#94a3b8">Render</text>
+
+<text x="572" y="188" text-anchor="end" font-family="ui-monospace, monospace" font-size="11.5" fill="#64748b">github.com/akshaysharma2005/SoundPulse ↗</text>
 </svg>
