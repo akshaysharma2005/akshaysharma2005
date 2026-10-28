@@ -1,334 +1,311 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="300" viewBox="0 0 1280 300" role="img" aria-label="3D Football Analytics Lab — Ultra 3D Spatial Matrix, Volumetric xG Towers, and Holographic Radar">
-<style>
-@keyframes sweep{0%{transform:translateX(-140px)}60%,100%{transform:translateX(1420px)}}
-@keyframes live{0%,100%{opacity:1}50%{opacity:.35}}
-@keyframes ringPulse{0%{r:4;opacity:0.95}100%{r:16;opacity:0}}
-@keyframes radarSpin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
-@keyframes radarBreath3D{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
-@keyframes dashFlow{to{stroke-dashoffset:-24}}
-@keyframes towerGlow{0%,100%{opacity:0.85;filter:drop-shadow(0 0 6px #10b981)}50%{opacity:1;filter:drop-shadow(0 0 18px #10b981)}}
-@keyframes floatBox{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
-@keyframes scanLine2{0%{transform:translateY(-20px);opacity:0}50%{opacity:0.5}100%{transform:translateY(220px);opacity:0}}
-@keyframes dataRain{0%{transform:translateY(-20px);opacity:0}20%{opacity:0.6}80%{opacity:0.4}100%{transform:translateY(200px);opacity:0}}
-@keyframes hexGrid{0%,100%{opacity:0.04}50%{opacity:0.1}}
-@keyframes energyPulse{0%{stroke-dashoffset:0}100%{stroke-dashoffset:-40}}
-@keyframes glowPulse{0%,100%{filter:drop-shadow(0 0 4px #10b981)}50%{filter:drop-shadow(0 0 14px #10b981)}}
-@keyframes particleFloat{0%{opacity:0;transform:translate(0,0) scale(0.5)}50%{opacity:0.8;transform:scale(1)}100%{opacity:0;transform:translate(10px,-20px) scale(0.3)}}
-
-.sweep{animation:sweep 7s ease-in-out infinite}
-.live{animation:live 1.6s ease-in-out infinite}
-.pulse-ring{animation:ringPulse 2.4s cubic-bezier(0,0.2,0.8,1) infinite}
-.radar-3d{animation:radarBreath3D 4s ease-in-out infinite;transform-origin:center}
-.flow-line{animation:dashFlow 1.2s linear infinite}
-.tower-pulse{animation:towerGlow 2.5s ease-in-out infinite}
-.floating-elem{animation:floatBox 5s ease-in-out infinite}
-.scan-v{animation:scanLine2 3s ease-in-out infinite}
-.energy-ring{animation:energyPulse 2s linear infinite;fill:none}
-.glow-p{animation:glowPulse 3s ease-in-out infinite}
-.hex{animation:hexGrid 5s ease-in-out infinite}
-.particle{animation:particleFloat 3s ease-in-out infinite}
-
-.hud-panel{transition:all .3s ease;cursor:pointer}
-.hud-panel:hover{stroke:#10b981;filter:drop-shadow(0 0 12px rgba(16,185,129,0.3))}
-.tower-node{transition:transform .2s ease;cursor:pointer}
-.tower-node:hover{transform:translateY(-4px)}
-</style>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="280" viewBox="0 0 1280 280">
 <defs>
-<linearGradient id="shineF" x1="0" x2="1">
-  <stop offset="0" stop-color="#10b981" stop-opacity="0"/>
-  <stop offset=".5" stop-color="#10b981" stop-opacity=".06"/>
-  <stop offset="1" stop-color="#10b981" stop-opacity="0"/>
-</linearGradient>
-<linearGradient id="towerGradGreen" x1="0" y1="1" x2="0" y2="0">
-  <stop offset="0%" stop-color="#052e16" stop-opacity="0.8"/><stop offset="100%" stop-color="#10b981" stop-opacity="0.95"/>
-</linearGradient>
-<linearGradient id="towerGradAmber" x1="0" y1="1" x2="0" y2="0">
-  <stop offset="0%" stop-color="#451a03" stop-opacity="0.8"/><stop offset="100%" stop-color="#fbbf24" stop-opacity="0.95"/>
-</linearGradient>
-<linearGradient id="towerGradBlue" x1="0" y1="1" x2="0" y2="0">
-  <stop offset="0%" stop-color="#082f49" stop-opacity="0.8"/><stop offset="100%" stop-color="#38bdf8" stop-opacity="0.95"/>
-</linearGradient>
-<linearGradient id="towerGradRose" x1="0" y1="1" x2="0" y2="0">
-  <stop offset="0%" stop-color="#4c0519" stop-opacity="0.8"/><stop offset="100%" stop-color="#f43f5e" stop-opacity="0.95"/>
-</linearGradient>
-<linearGradient id="panelGrad" x1="0" y1="0" x2="0" y2="1">
-  <stop offset="0%" stop-color="#0e1822"/><stop offset="100%" stop-color="#0a1118"/>
-</linearGradient>
-<linearGradient id="radarFill" x1="0" y1="0" x2="1" y2="1">
-  <stop offset="0%" stop-color="#10b981" stop-opacity="0.3"/><stop offset="100%" stop-color="#38bdf8" stop-opacity="0.15"/>
-</linearGradient>
-<!-- Circuit pattern -->
-<pattern id="circuitF" width="48" height="48" patternUnits="userSpaceOnUse">
-  <path d="M0 24h14v-8h6v8h4v-14h6v14h18" fill="none" stroke="#10b981" stroke-width="0.3" opacity="0.1"/>
-  <circle cx="14" cy="16" r="1" fill="#10b981" opacity="0.12"/>
-</pattern>
-<filter id="glowF" x="-50%" y="-50%" width="200%" height="200%">
-  <feGaussianBlur stdDeviation="3.5" result="coloredBlur"/>
-  <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
-</filter>
-<filter id="neonF" x="-100%" y="-100%" width="300%" height="300%">
-  <feGaussianBlur stdDeviation="5" result="glow1"/>
-  <feGaussianBlur stdDeviation="2" result="glow2" in="SourceGraphic"/>
-  <feMerge><feMergeNode in="glow1"/><feMergeNode in="glow2"/><feMergeNode in="SourceGraphic"/></feMerge>
-</filter>
-<filter id="softF" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="8"/></filter>
-<clipPath id="fclip"><rect x="1" y="1" width="1278" height="298" rx="18"/></clipPath>
+  <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#0a0f1e"/>
+    <stop offset="50%" stop-color="#0d1b2a"/>
+    <stop offset="100%" stop-color="#0a0f1e"/>
+  </linearGradient>
+  <linearGradient id="accentH" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#00ff87" stop-opacity="0"/>
+    <stop offset="30%" stop-color="#00ff87"/>
+    <stop offset="70%" stop-color="#00d4ff"/>
+    <stop offset="100%" stop-color="#00d4ff" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="xgBarG" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#00ff87"/>
+    <stop offset="100%" stop-color="#00ff87" stop-opacity="0.2"/>
+  </linearGradient>
+  <linearGradient id="xgBarA" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#ffb800"/>
+    <stop offset="100%" stop-color="#ffb800" stop-opacity="0.2"/>
+  </linearGradient>
+  <linearGradient id="xgBarB" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#00d4ff"/>
+    <stop offset="100%" stop-color="#00d4ff" stop-opacity="0.2"/>
+  </linearGradient>
+  <linearGradient id="xgBarR" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#ef4444"/>
+    <stop offset="100%" stop-color="#ef4444" stop-opacity="0.2"/>
+  </linearGradient>
+  <linearGradient id="radarFill2" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#00ff87" stop-opacity="0.2"/>
+    <stop offset="100%" stop-color="#00d4ff" stop-opacity="0.1"/>
+  </linearGradient>
+  <filter id="glow2">
+    <feGaussianBlur stdDeviation="2.5" result="blur"/>
+    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <filter id="bgBlur2"><feGaussianBlur stdDeviation="40"/></filter>
+  <clipPath id="clip2"><rect width="1280" height="280"/></clipPath>
 </defs>
 
+<g clip-path="url(#clip2)">
+
 <!-- Background -->
-<g clip-path="url(#fclip)">
-  <rect width="1280" height="300" fill="#060a0e"/>
-  <rect width="1280" height="300" fill="url(#circuitF)" opacity="0.6"/>
-  <rect class="sweep" x="0" y="0" width="140" height="300" fill="url(#shineF)"/>
-  <!-- Ambient orbs -->
-  <circle cx="200" cy="150" r="140" fill="#10b981" opacity="0.04" filter="url(#softF)"/>
-  <circle cx="640" cy="150" r="160" fill="#38bdf8" opacity="0.03" filter="url(#softF)"/>
-  <circle cx="1080" cy="150" r="140" fill="#a78bfa" opacity="0.03" filter="url(#softF)"/>
+<rect width="1280" height="280" fill="url(#bg2)"/>
+<g opacity="0.03" stroke="#00ff87" stroke-width="0.5">
+  <line x1="0" y1="70" x2="1280" y2="70"/>
+  <line x1="0" y1="140" x2="1280" y2="140"/>
+  <line x1="0" y1="210" x2="1280" y2="210"/>
+  <line x1="426" y1="0" x2="426" y2="280"/>
+  <line x1="853" y1="0" x2="853" y2="280"/>
+</g>
+<circle cx="213" cy="140" r="160" fill="#00ff87" opacity="0.04" filter="url(#bgBlur2)"/>
+<circle cx="640" cy="140" r="160" fill="#ffb800" opacity="0.03" filter="url(#bgBlur2)"/>
+<circle cx="1067" cy="140" r="160" fill="#00d4ff" opacity="0.04" filter="url(#bgBlur2)"/>
+
+<!-- Top / Bottom accent lines -->
+<rect x="0" y="0" width="1280" height="2" fill="url(#accentH)" opacity="0.6"/>
+<rect x="0" y="278" width="1280" height="2" fill="url(#accentH)" opacity="0.6"/>
+
+<!-- ═══════════════════════════════
+     PANEL 1 — xG Shot Map Bars
+════════════════════════════════ -->
+<g transform="translate(40, 0)">
+  
+  <!-- Panel label -->
+  <rect x="0" y="18" width="3" height="36" fill="#00ff87" rx="2"/>
+  <text x="14" y="35" font-family="'Segoe UI', system-ui, sans-serif" font-size="16" font-weight="700" fill="#ffffff">xG Shot Analysis</text>
+  <text x="14" y="52" font-family="monospace" font-size="10" fill="#334155" letter-spacing="1.5">EXPECTED GOALS PER ZONE</text>
+
+  <!-- Vertical bar chart -->
+  <!-- Zone labels at bottom -->
+  <text x="50" y="240" text-anchor="middle" font-family="monospace" font-size="9.5" fill="#64748b">6-yd</text>
+  <text x="110" y="240" text-anchor="middle" font-family="monospace" font-size="9.5" fill="#64748b">Pen</text>
+  <text x="170" y="240" text-anchor="middle" font-family="monospace" font-size="9.5" fill="#64748b">D-L</text>
+  <text x="230" y="240" text-anchor="middle" font-family="monospace" font-size="9.5" fill="#64748b">D-R</text>
+  <text x="290" y="240" text-anchor="middle" font-family="monospace" font-size="9.5" fill="#64748b">Far</text>
+  <text x="350" y="240" text-anchor="middle" font-family="monospace" font-size="9.5" fill="#64748b">FK</text>
+
+  <!-- Base line -->
+  <line x1="20" y1="225" x2="390" y2="225" stroke="#1e293b" stroke-width="1.5"/>
+  <!-- Y-axis labels -->
+  <text x="14" y="228" text-anchor="end" font-family="monospace" font-size="9" fill="#334155">0</text>
+  <text x="14" y="175" text-anchor="end" font-family="monospace" font-size="9" fill="#334155">.5</text>
+  <text x="14" y="122" text-anchor="end" font-family="monospace" font-size="9" fill="#334155">1.0</text>
+  <line x1="18" y1="172" x2="390" y2="172" stroke="#1e293b" stroke-width="0.5" stroke-dasharray="3 3"/>
+  <line x1="18" y1="120" x2="390" y2="120" stroke="#1e293b" stroke-width="0.5" stroke-dasharray="3 3"/>
+
+  <!-- Bar: 6-yd box — xG 0.82 -->
+  <rect x="26" y="72" width="48" height="153" rx="4" fill="url(#xgBarG)" opacity="0.9"/>
+  <rect x="26" y="72" width="48" height="3" rx="2" fill="#00ff87" filter="url(#glow2)"/>
+  <text x="50" y="66" text-anchor="middle" font-family="monospace" font-size="10" font-weight="700" fill="#00ff87">0.82</text>
+
+  <!-- Bar: Penalty — xG 0.76 -->
+  <rect x="86" y="82" width="48" height="143" rx="4" fill="url(#xgBarG)" opacity="0.75"/>
+  <rect x="86" y="82" width="48" height="3" rx="2" fill="#00ff87" filter="url(#glow2)"/>
+  <text x="110" y="76" text-anchor="middle" font-family="monospace" font-size="10" font-weight="700" fill="#00ff87">0.76</text>
+
+  <!-- Bar: D-Left — xG 0.43 -->
+  <rect x="146" y="144" width="48" height="81" rx="4" fill="url(#xgBarA)" opacity="0.85"/>
+  <rect x="146" y="144" width="48" height="3" rx="2" fill="#ffb800" filter="url(#glow2)"/>
+  <text x="170" y="138" text-anchor="middle" font-family="monospace" font-size="10" font-weight="700" fill="#ffb800">0.43</text>
+
+  <!-- Bar: D-Right — xG 0.38 -->
+  <rect x="206" y="153" width="48" height="72" rx="4" fill="url(#xgBarA)" opacity="0.75"/>
+  <rect x="206" y="153" width="48" height="3" rx="2" fill="#ffb800" filter="url(#glow2)"/>
+  <text x="230" y="147" text-anchor="middle" font-family="monospace" font-size="10" font-weight="700" fill="#ffb800">0.38</text>
+
+  <!-- Bar: Far post — xG 0.12 -->
+  <rect x="266" y="202" width="48" height="23" rx="4" fill="url(#xgBarB)" opacity="0.8"/>
+  <rect x="266" y="202" width="48" height="3" rx="2" fill="#00d4ff" filter="url(#glow2)"/>
+  <text x="290" y="196" text-anchor="middle" font-family="monospace" font-size="10" font-weight="700" fill="#00d4ff">0.12</text>
+
+  <!-- Bar: Free kick — xG 0.07 -->
+  <rect x="326" y="212" width="48" height="13" rx="4" fill="url(#xgBarR)" opacity="0.8"/>
+  <rect x="326" y="212" width="48" height="3" rx="2" fill="#ef4444" filter="url(#glow2)"/>
+  <text x="350" y="206" text-anchor="middle" font-family="monospace" font-size="10" font-weight="700" fill="#ef4444">0.07</text>
+
+  <!-- Bottom stats -->
+  <text x="14" y="265" font-family="'Segoe UI', sans-serif" font-size="11.5" fill="#64748b">Total xG: <tspan fill="#00ff87" font-weight="700">2.58</tspan>  ·  Goals: <tspan fill="#ffffff" font-weight="700">3</tspan>  ·  Shots: <tspan fill="#00d4ff" font-weight="700">14</tspan></text>
 </g>
 
-<!-- HUD Corner Brackets -->
-<g opacity="0.35">
-  <path d="M20 4 L4 4 L4 20" fill="none" stroke="#10b981" stroke-width="1.5"/>
-  <path d="M1260 4 L1276 4 L1276 20" fill="none" stroke="#10b981" stroke-width="1.5"/>
-  <path d="M20 296 L4 296 L4 280" fill="none" stroke="#10b981" stroke-width="1.5"/>
-  <path d="M1260 296 L1276 296 L1276 280" fill="none" stroke="#10b981" stroke-width="1.5"/>
-</g>
-<rect x="0.5" y="0.5" width="1279" height="299" rx="18" fill="none" stroke="#1e2c3d"/>
+<!-- Vertical divider -->
+<line x1="430" y1="20" x2="430" y2="260" stroke="#1e293b" stroke-width="1"/>
 
-<!-- Card Header -->
-<circle class="live" cx="44" cy="38" r="3.5" fill="#10b981"/>
-<text x="58" y="42" font-family="ui-monospace, SFMono-Regular, monospace" font-size="12" letter-spacing="1.2" fill="#64748b">
-  3D FOOTBALL ANALYTICS LAB · SPATIAL HISTOGRAM &amp; VOLUMETRIC xG
-</text>
-<g transform="translate(1040, 28)">
-  <rect width="196" height="22" rx="11" fill="#0d1820" stroke="#10b981" stroke-opacity="0.4"/>
-  <circle class="live" cx="14" cy="11" r="2.5" fill="#10b981"/>
-  <text x="98" y="15" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, monospace" font-size="10.5" font-weight="600" fill="#10b981">⬡ 3D TACTICAL RECONSTRUCTION</text>
-</g>
-<line x1="40" x2="1240" y1="60" y2="60" stroke="#1e2c3d"/>
+<!-- ═══════════════════════════════
+     PANEL 2 — Pass Network Map
+════════════════════════════════ -->
+<g transform="translate(450, 0)">
 
-<!-- Column 1: 3D Passing Network & Structure -->
-<g class="hud-panel" transform="translate(48, 76)">
-  <rect width="364" height="202" rx="12" fill="url(#panelGrad)" stroke="#1b2c3d"/>
-  <!-- Panel inner glow line -->
-  <line x1="12" y1="1" x2="120" y2="1" stroke="#10b981" stroke-width="2" opacity="0.3"/>
-  <text x="18" y="26" font-family="'Iowan Old Style', Palatino, serif" font-size="17" fill="#f1f5f9">3D Passing Network &amp; Spacing</text>
-  <text x="18" y="44" font-family="ui-monospace, monospace" font-size="11" fill="#64748b">ISOMETRIC FORMATION: 4-3-3</text>
+  <rect x="0" y="18" width="3" height="36" fill="#00d4ff" rx="2"/>
+  <text x="14" y="35" font-family="'Segoe UI', system-ui, sans-serif" font-size="16" font-weight="700" fill="#ffffff">Pass Network</text>
+  <text x="14" y="52" font-family="monospace" font-size="10" fill="#334155" letter-spacing="1.5">TOUCH MAP &amp; CONNECTIONS</text>
 
-  <!-- 3D Network Isometric Mini-Pitch -->
-  <g class="floating-elem" transform="translate(18, 52)">
-    <!-- 3D Angled Pitch Slab -->
-    <polygon points="10,60 164,12 318,60 164,96" fill="#07131a" stroke="#1c3328" stroke-width="1.2"/>
-    <polygon points="10,60 164,96 164,104 10,68" fill="#040b0f" stroke="#10b981" stroke-width="0.8"/>
-    <polygon points="164,96 318,60 318,68 164,104" fill="#02070a" stroke="#0a2a1e" stroke-width="0.8"/>
+  <!-- Mini half-pitch -->
+  <rect x="14" y="65" width="370" height="185" rx="6" fill="#0d1f14" stroke="#1a3d20" stroke-width="1"/>
+  <rect x="20" y="70" width="358" height="175" fill="none" stroke="#1a3d20" stroke-width="0.7"/>
+  <!-- Penalty arc -->
+  <path d="M 14 140 Q 80 115 80 140 Q 80 165 14 140" fill="none" stroke="#1a3d20" stroke-width="0.7"/>
+  <!-- Goal -->
+  <rect x="14" y="122" width="10" height="36" fill="#1a3d20"/>
 
-    <!-- Pitch markings -->
-    <line x1="164" y1="12" x2="164" y2="96" stroke="#1c2d3e" stroke-dasharray="2 2"/>
-    <ellipse cx="164" cy="54" rx="26" ry="11" fill="none" stroke="#1c2d3e"/>
+  <!-- CONNECTION LINES (drawn first so nodes go on top) -->
+  <!-- GK → CB1 (thick = many passes) -->
+  <line x1="42" y1="140" x2="118" y2="112" stroke="#00d4ff" stroke-width="2.5" stroke-dasharray="5 3" opacity="0.5">
+    <animate attributeName="stroke-dashoffset" values="0;-16" dur="1.2s" repeatCount="indefinite"/>
+  </line>
+  <!-- GK → CB2 -->
+  <line x1="42" y1="140" x2="118" y2="168" stroke="#00d4ff" stroke-width="2" stroke-dasharray="5 3" opacity="0.4">
+    <animate attributeName="stroke-dashoffset" values="0;-16" dur="1.2s" repeatCount="indefinite"/>
+  </line>
+  <!-- CB1 → CDM -->
+  <line x1="118" y1="112" x2="198" y2="130" stroke="#00ff87" stroke-width="2.5" stroke-dasharray="5 3" opacity="0.55">
+    <animate attributeName="stroke-dashoffset" values="0;-16" dur="1s" repeatCount="indefinite"/>
+  </line>
+  <!-- CB2 → CDM -->
+  <line x1="118" y1="168" x2="198" y2="130" stroke="#00ff87" stroke-width="2" stroke-dasharray="5 3" opacity="0.45">
+    <animate attributeName="stroke-dashoffset" values="0;-16" dur="1s" repeatCount="indefinite"/>
+  </line>
+  <!-- LB → LCM -->
+  <line x1="118" y1="82" x2="198" y2="96" stroke="#00d4ff" stroke-width="1.8" stroke-dasharray="4 3" opacity="0.35">
+    <animate attributeName="stroke-dashoffset" values="0;-14" dur="1.3s" repeatCount="indefinite"/>
+  </line>
+  <!-- RB → RCM -->
+  <line x1="118" y1="198" x2="198" y2="164" stroke="#00d4ff" stroke-width="1.8" stroke-dasharray="4 3" opacity="0.35">
+    <animate attributeName="stroke-dashoffset" values="0;-14" dur="1.3s" repeatCount="indefinite"/>
+  </line>
+  <!-- CDM → CAM (KEY pass) -->
+  <line x1="198" y1="130" x2="280" y2="130" stroke="#00ff87" stroke-width="3" opacity="0.7">
+    <animate attributeName="stroke-dashoffset" values="0;-14" dur="0.8s" repeatCount="indefinite"/>
+  </line>
+  <!-- LCM → LW -->
+  <line x1="198" y1="96" x2="280" y2="82" stroke="#ffb800" stroke-width="1.8" stroke-dasharray="4 3" opacity="0.4">
+    <animate attributeName="stroke-dashoffset" values="0;-14" dur="1.1s" repeatCount="indefinite"/>
+  </line>
+  <!-- RCM → RW -->
+  <line x1="198" y1="164" x2="280" y2="178" stroke="#ffb800" stroke-width="1.8" stroke-dasharray="4 3" opacity="0.4">
+    <animate attributeName="stroke-dashoffset" values="0;-14" dur="1.1s" repeatCount="indefinite"/>
+  </line>
+  <!-- CAM → ST -->
+  <line x1="280" y1="130" x2="358" y2="130" stroke="#ffb800" stroke-width="3" stroke-dasharray="5 3" opacity="0.8">
+    <animate attributeName="stroke-dashoffset" values="0;-16" dur="0.7s" repeatCount="indefinite"/>
+  </line>
 
-    <!-- Energy ring around pitch -->
-    <ellipse class="energy-ring" cx="164" cy="54" rx="170" ry="54" stroke="#10b981" stroke-width="0.5" stroke-dasharray="4 6" opacity="0.2"/>
+  <!-- Nodes: sizes = touch count -->
+  <!-- GK -->
+  <circle cx="42" cy="140" r="11" fill="#0a0f1e" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="42" y="144" text-anchor="middle" font-family="monospace" font-size="8" fill="#94a3b8">GK</text>
+  
+  <!-- LB -->
+  <circle cx="118" cy="82" r="10" fill="#0a0f1e" stroke="#00d4ff" stroke-width="1.5"/>
+  <text x="118" y="86" text-anchor="middle" font-family="monospace" font-size="8" fill="#00d4ff">LB</text>
+  
+  <!-- CB1 -->
+  <circle cx="118" cy="112" r="12" fill="#0a0f1e" stroke="#00d4ff" stroke-width="2"/>
+  <text x="118" y="116" text-anchor="middle" font-family="monospace" font-size="8" font-weight="600" fill="#00d4ff">CB</text>
+  
+  <!-- CB2 -->
+  <circle cx="118" cy="168" r="12" fill="#0a0f1e" stroke="#00d4ff" stroke-width="2"/>
+  <text x="118" y="172" text-anchor="middle" font-family="monospace" font-size="8" font-weight="600" fill="#00d4ff">CB</text>
+  
+  <!-- RB -->
+  <circle cx="118" cy="198" r="10" fill="#0a0f1e" stroke="#00d4ff" stroke-width="1.5"/>
+  <text x="118" y="202" text-anchor="middle" font-family="monospace" font-size="8" fill="#00d4ff">RB</text>
+  
+  <!-- LCM -->
+  <circle cx="198" cy="96" r="11" fill="#0a0f1e" stroke="#a78bfa" stroke-width="1.8"/>
+  <text x="198" y="100" text-anchor="middle" font-family="monospace" font-size="8" fill="#a78bfa">LCM</text>
+  
+  <!-- CDM — Hub node (biggest) -->
+  <circle cx="198" cy="130" r="16" fill="#0a0f1e" stroke="#00ff87" stroke-width="2.5"/>
+  <text x="198" y="134" text-anchor="middle" font-family="monospace" font-size="9" font-weight="700" fill="#00ff87">CDM</text>
+  <circle cx="198" cy="130" r="22" fill="none" stroke="#00ff87" stroke-width="1" opacity="0.3">
+    <animate attributeName="r" values="16;26;16" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.4;0;0.4" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- RCM -->
+  <circle cx="198" cy="164" r="11" fill="#0a0f1e" stroke="#a78bfa" stroke-width="1.8"/>
+  <text x="198" y="168" text-anchor="middle" font-family="monospace" font-size="8" fill="#a78bfa">RCM</text>
+  
+  <!-- LW -->
+  <circle cx="280" cy="82" r="10" fill="#0a0f1e" stroke="#ffb800" stroke-width="1.8"/>
+  <text x="280" y="86" text-anchor="middle" font-family="monospace" font-size="8" fill="#ffb800">LW</text>
+  
+  <!-- CAM -->
+  <circle cx="280" cy="130" r="14" fill="#0a0f1e" stroke="#00ff87" stroke-width="2.2"/>
+  <text x="280" y="134" text-anchor="middle" font-family="monospace" font-size="8.5" font-weight="700" fill="#00ff87">CAM</text>
+  
+  <!-- RW -->
+  <circle cx="280" cy="178" r="10" fill="#0a0f1e" stroke="#ffb800" stroke-width="1.8"/>
+  <text x="280" y="182" text-anchor="middle" font-family="monospace" font-size="8" fill="#ffb800">RW</text>
+  
+  <!-- ST — Goal scorer -->
+  <circle cx="358" cy="130" r="15" fill="#ffb800" stroke="#ffb800" stroke-width="2"/>
+  <text x="358" y="134" text-anchor="middle" font-family="monospace" font-size="9" font-weight="700" fill="#0a0f1e">ST ⚽</text>
+  <circle cx="358" cy="130" r="22" fill="none" stroke="#ffb800" stroke-width="1" opacity="0.4">
+    <animate attributeName="r" values="15;28;15" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.6;0;0.6" dur="2s" repeatCount="indefinite"/>
+  </circle>
 
-    <!-- 3D Elevated Passing Vectors -->
-    <line class="flow-line" x1="48" y1="48" x2="116" y2="62" stroke="#38bdf8" stroke-width="1.8" stroke-dasharray="4 4" filter="url(#glowF)"/>
-    <line class="flow-line" x1="116" y1="62" x2="176" y2="34" stroke="#10b981" stroke-width="2.2" stroke-dasharray="4 4" filter="url(#glowF)"/>
-    <line class="flow-line" x1="176" y1="34" x2="246" y2="28" stroke="#10b981" stroke-width="1.8" stroke-dasharray="4 4" filter="url(#glowF)"/>
-    <line class="flow-line" x1="176" y1="34" x2="270" y2="64" stroke="#fbbf24" stroke-width="2" stroke-dasharray="4 4" filter="url(#glowF)"/>
-    <line class="flow-line" x1="246" y1="28" x2="270" y2="64" stroke="#10b981" stroke-width="1.6" stroke-dasharray="3 3"/>
+  <!-- Animated ball -->
+  <circle r="3.5" fill="#ffffff" filter="url(#glow2)">
+    <animateMotion dur="4s" repeatCount="indefinite" path="M 42 140 L 118 112 L 198 130 L 280 130 L 358 130 L 280 82 L 198 96 L 198 130 L 42 140"/>
+  </circle>
 
-    <!-- 3D Pedestals with Holographic Labels -->
-    <!-- CB -->
-    <g transform="translate(48, 48)">
-      <polygon points="-4,0 4,0 4,10 -4,10" fill="#071924"/>
-      <ellipse cx="0" cy="0" rx="4" ry="2" fill="#38bdf8" filter="url(#glowF)"/>
-      <text x="0" y="-8" text-anchor="middle" font-family="ui-monospace, monospace" font-size="9" fill="#64748b">CB</text>
-    </g>
-    <!-- CDM (Pivot) -->
-    <g transform="translate(116, 62)">
-      <polygon points="-5,0 5,0 5,14 -5,14" fill="#071924"/>
-      <ellipse cx="0" cy="0" rx="5" ry="2.5" fill="#38bdf8" filter="url(#glowF)"/>
-      <text x="0" y="-8" text-anchor="middle" font-family="ui-monospace, monospace" font-size="9.5" font-weight="600" fill="#38bdf8">CDM · 94%</text>
-    </g>
-    <!-- CAM (Hub) -->
-    <g transform="translate(176, 34)">
-      <polygon points="-6,0 6,0 6,18 -6,18" fill="#082218"/>
-      <ellipse cx="0" cy="0" rx="6" ry="2.8" fill="#10b981" filter="url(#neonF)"/>
-      <circle class="pulse-ring" cx="0" cy="0" r="4" fill="none" stroke="#10b981" stroke-width="1.5"/>
-      <text x="0" y="-9" text-anchor="middle" font-family="ui-monospace, monospace" font-size="9.5" font-weight="700" fill="#34d399">CAM (Hub)</text>
-    </g>
-    <!-- RW -->
-    <g transform="translate(246, 28)">
-      <polygon points="-4.5,0 4.5,0 4.5,14 -4.5,14" fill="#082218"/>
-      <ellipse cx="0" cy="0" rx="4.5" ry="2.2" fill="#10b981" filter="url(#glowF)"/>
-      <text x="0" y="-8" text-anchor="middle" font-family="ui-monospace, monospace" font-size="9" fill="#94a3b8">RW</text>
-    </g>
-    <!-- ST -->
-    <g transform="translate(270, 64)">
-      <polygon points="-5,0 5,0 5,20 -5,20" fill="#211804"/>
-      <ellipse cx="0" cy="0" rx="5" ry="2.5" fill="#fbbf24" filter="url(#neonF)"/>
-      <circle class="pulse-ring" cx="0" cy="0" r="4" fill="none" stroke="#fbbf24" stroke-width="1.5" style="animation-delay:1.5s;"/>
-      <text x="0" y="-8" text-anchor="middle" font-family="ui-monospace, monospace" font-size="9.5" font-weight="700" fill="#fbbf24">ST ⚽</text>
-    </g>
-
-    <!-- Traveling 3D Data Packets (multiple) -->
-    <circle r="2.2" fill="#10b981" opacity="0.3">
-      <animateMotion dur="3.6s" begin="0.2s" repeatCount="indefinite" path="M 48 48 L 116 62 L 176 34 L 246 28 L 270 64"/>
-    </circle>
-    <circle r="2.8" fill="#ffffff" filter="url(#glowF)">
-      <animateMotion dur="3.6s" repeatCount="indefinite" path="M 48 48 L 116 62 L 176 34 L 246 28 L 270 64"/>
-    </circle>
-  </g>
-
-  <!-- Metrics Footer -->
-  <g transform="translate(18, 160)">
-    <text x="0" y="14" font-family="-apple-system, sans-serif" font-size="11.5" fill="#94a3b8">Field Tilt: <tspan fill="#34d399" font-weight="600">68.4%</tspan></text>
-    <text x="110" y="14" font-family="-apple-system, sans-serif" font-size="11.5" fill="#94a3b8">Pass Acc: <tspan fill="#38bdf8" font-weight="600">89.2%</tspan></text>
-    <text x="218" y="14" font-family="-apple-system, sans-serif" font-size="11.5" fill="#94a3b8">PPDA: <tspan fill="#f43f5e" font-weight="600">7.8</tspan></text>
-    <text x="0" y="32" font-family="ui-monospace, monospace" font-size="10" fill="#64748b">ISOMETRIC SPATIAL CLUSTERING · 35° VIEW</text>
-  </g>
-</g>
-
-<!-- Column 2: 3D Extruded xG Shot Map (Volumetric Towers) -->
-<g class="hud-panel" transform="translate(432, 76)">
-  <rect width="364" height="202" rx="12" fill="url(#panelGrad)" stroke="#1b2c3d"/>
-  <line x1="12" y1="1" x2="120" y2="1" stroke="#fbbf24" stroke-width="2" opacity="0.3"/>
-  <text x="18" y="26" font-family="'Iowan Old Style', Palatino, serif" font-size="17" fill="#f1f5f9">3D Volumetric xG Shot Map</text>
-  <text x="18" y="44" font-family="ui-monospace, monospace" font-size="11" fill="#64748b">Z-EXTRUDED THREAT TOWERS</text>
-
-  <!-- Vertical scan line inside panel -->
-  <rect class="scan-v" x="180" y="52" width="1" height="20" fill="#10b981" opacity="0.3"/>
-
-  <g class="floating-elem" transform="translate(18, 52)">
-    <!-- 3D Box Turf Plane -->
-    <polygon points="12,68 164,14 316,68 164,100" fill="#07131a" stroke="#1c3328" stroke-width="1.2"/>
-    <!-- Goal mouth line -->
-    <line x1="130" y1="26" x2="198" y2="26" stroke="#10b981" stroke-width="2.5" filter="url(#glowF)"/>
-
-    <!-- 3D TOWER 1: Central Goal (xG: 0.76) - TALL GREEN SKYSCRAPER -->
-    <g class="tower-node tower-pulse" transform="translate(164, 46)">
-      <polygon points="-12,0 0,6 0,-44 -12,-50" fill="url(#towerGradGreen)" stroke="#10b981" stroke-width="0.8"/>
-      <polygon points="0,6 12,0 12,-50 0,-44" fill="#0a3f2b" stroke="#10b981" stroke-width="0.8"/>
-      <polygon points="-12,-50 0,-44 12,-50 0,-56" fill="#34d399"/>
-      <circle cx="0" cy="-50" r="2.5" fill="#ffffff" filter="url(#glowF)"/>
-      <!-- Holographic energy rings around tower -->
-      <ellipse cx="0" cy="-30" rx="14" ry="4" fill="none" stroke="#10b981" stroke-width="0.6" stroke-dasharray="2 3" opacity="0.4"/>
-      <text x="0" y="-62" text-anchor="middle" font-family="ui-monospace, monospace" font-size="9" font-weight="700" fill="#34d399">GOAL 0.76 ⚽</text>
-    </g>
-
-    <!-- 3D TOWER 2: Saved (xG: 0.34) - MEDIUM BLUE TOWER -->
-    <g class="tower-node" transform="translate(230, 52)">
-      <polygon points="-9,0 0,4.5 0,-24 -9,-28.5" fill="url(#towerGradBlue)" stroke="#38bdf8" stroke-width="0.8"/>
-      <polygon points="0,4.5 9,0 9,-28.5 0,-24" fill="#072233" stroke="#38bdf8" stroke-width="0.8"/>
-      <polygon points="-9,-28.5 0,-24 9,-28.5 0,-33" fill="#38bdf8"/>
-      <circle cx="0" cy="-28" r="1.8" fill="#ffffff"/>
-      <text x="0" y="-38" text-anchor="middle" font-family="ui-monospace, monospace" font-size="8.5" font-weight="600" fill="#38bdf8">Saved 0.34</text>
-    </g>
-
-    <!-- 3D TOWER 3: Post Strike (xG: 0.42) - MEDIUM GOLD TOWER -->
-    <g class="tower-node" transform="translate(98, 50)">
-      <polygon points="-9,0 0,4.5 0,-30 -9,-34.5" fill="url(#towerGradAmber)" stroke="#fbbf24" stroke-width="0.8"/>
-      <polygon points="0,4.5 9,0 9,-34.5 0,-30" fill="#291b03" stroke="#fbbf24" stroke-width="0.8"/>
-      <polygon points="-9,-34.5 0,-30 9,-34.5 0,-39" fill="#fbbf24"/>
-      <circle cx="0" cy="-34" r="1.8" fill="#ffffff"/>
-      <text x="0" y="-44" text-anchor="middle" font-family="ui-monospace, monospace" font-size="8.5" font-weight="600" fill="#fbbf24">Post 0.42</text>
-    </g>
-
-    <!-- 3D TOWER 4: Blocked (xG: 0.08) - SHORT SLATE TOWER -->
-    <g class="tower-node" transform="translate(164, 82)">
-      <polygon points="-7,0 0,3.5 0,-12 -7,-15.5" fill="#1e293b" stroke="#64748b" stroke-width="0.8"/>
-      <polygon points="0,3.5 7,0 7,-15.5 0,-12" fill="#0f172a" stroke="#64748b" stroke-width="0.8"/>
-      <polygon points="-7,-15.5 0,-12 7,-15.5 0,-19" fill="#94a3b8"/>
-      <text x="14" y="-12" text-anchor="start" font-family="ui-monospace, monospace" font-size="8" fill="#64748b">0.08</text>
-    </g>
-
-    <!-- NEW TOWER 5: Wide Shot (xG: 0.12) - SHORT ROSE TOWER -->
-    <g class="tower-node" transform="translate(70, 72)">
-      <polygon points="-7,0 0,3.5 0,-16 -7,-19.5" fill="url(#towerGradRose)" stroke="#f43f5e" stroke-width="0.8"/>
-      <polygon points="0,3.5 7,0 7,-19.5 0,-16" fill="#3b0712" stroke="#f43f5e" stroke-width="0.8"/>
-      <polygon points="-7,-19.5 0,-16 7,-19.5 0,-23" fill="#f43f5e"/>
-      <text x="0" y="-28" text-anchor="middle" font-family="ui-monospace, monospace" font-size="8" fill="#f43f5e">Miss 0.12</text>
-    </g>
-
-    <!-- Floating data particles -->
-    <circle class="particle" cx="164" cy="20" r="1.5" fill="#10b981" style="animation-delay:0s"/>
-    <circle class="particle" cx="230" cy="40" r="1" fill="#38bdf8" style="animation-delay:1s"/>
-    <circle class="particle" cx="98" cy="35" r="1.2" fill="#fbbf24" style="animation-delay:2s"/>
-  </g>
-
-  <!-- Shot Map Legend & Stats -->
-  <g transform="translate(18, 160)">
-    <text x="0" y="14" font-family="-apple-system, sans-serif" font-size="11.5" fill="#94a3b8">Match xG: <tspan fill="#34d399" font-weight="600">2.48</tspan> <tspan font-size="10" fill="#64748b">(Actual: 3)</tspan></text>
-    <text x="140" y="14" font-family="-apple-system, sans-serif" font-size="11.5" fill="#94a3b8">xT Generated: <tspan fill="#38bdf8" font-weight="600">+1.64</tspan></text>
-    <text x="0" y="32" font-family="ui-monospace, monospace" font-size="10" fill="#64748b">3D EXTENSION: COLUMN HEIGHT = xG THREAT</text>
-  </g>
+  <!-- Bottom stat -->
+  <text x="14" y="265" font-family="'Segoe UI', sans-serif" font-size="11.5" fill="#64748b">Pass Acc: <tspan fill="#00ff87" font-weight="700">89.2%</tspan>  ·  Touches: <tspan fill="#ffffff" font-weight="700">641</tspan>  ·  Field Tilt: <tspan fill="#00d4ff" font-weight="700">68%</tspan></text>
 </g>
 
-<!-- Column 3: 3D Holographic Spider Radar (Playmaker Polyhedron) -->
-<g class="hud-panel" transform="translate(816, 76)">
-  <rect width="416" height="202" rx="12" fill="url(#panelGrad)" stroke="#1b2c3d"/>
-  <line x1="12" y1="1" x2="120" y2="1" stroke="#38bdf8" stroke-width="2" opacity="0.3"/>
-  <text x="18" y="26" font-family="'Iowan Old Style', Palatino, serif" font-size="17" fill="#f1f5f9">3D Playmaker Scouting Polyhedron</text>
-  <text x="18" y="44" font-family="ui-monospace, monospace" font-size="11" fill="#64748b">TILTED MULTI-AXIS HOLOGRAM</text>
+<!-- Vertical divider -->
+<line x1="857" y1="20" x2="857" y2="260" stroke="#1e293b" stroke-width="1"/>
 
-  <!-- 3D Tilted Isometric Radar Polyhedron -->
-  <g class="radar-3d" transform="translate(208, 126)">
-    <!-- 3D Depth Ground Shadow -->
-    <ellipse cx="0" cy="40" rx="55" ry="14" fill="#000000" opacity="0.4" filter="url(#softF)"/>
+<!-- ═══════════════════════════════
+     PANEL 3 — Radar Chart
+════════════════════════════════ -->
+<g transform="translate(877, 0)">
+  <rect x="0" y="18" width="3" height="36" fill="#a78bfa" rx="2"/>
+  <text x="14" y="35" font-family="'Segoe UI', system-ui, sans-serif" font-size="16" font-weight="700" fill="#ffffff">Playmaker Radar</text>
+  <text x="14" y="52" font-family="monospace" font-size="10" fill="#334155" letter-spacing="1.5">TACTICAL PERFORMANCE INDEX</text>
 
-    <!-- Rotating scanner line -->
-    <g style="animation:radarSpin 8s linear infinite;transform-origin:0 0">
-      <line x1="0" y1="0" x2="0" y2="-72" stroke="#10b981" stroke-width="1" opacity="0.3"/>
-      <circle cx="0" cy="-72" r="2" fill="#10b981" opacity="0.5"/>
-    </g>
+  <!-- Radar chart centered -->
+  <g transform="translate(200, 155)">
+    <!-- Background rings -->
+    <polygon points="0,-80 69,-40 69,40 0,80 -69,40 -69,-40" fill="none" stroke="#1e293b" stroke-width="1"/>
+    <polygon points="0,-60 52,-30 52,30 0,60 -52,30 -52,-30" fill="none" stroke="#1e293b" stroke-width="1"/>
+    <polygon points="0,-40 35,-20 35,20 0,40 -35,20 -35,-20" fill="none" stroke="#1e293b" stroke-width="1"/>
+    <polygon points="0,-20 17,-10 17,10 0,20 -17,10 -17,-10" fill="none" stroke="#1e293b" stroke-width="1"/>
+    <!-- Axis lines -->
+    <line x1="0" y1="-80" x2="0" y2="80" stroke="#1e293b" stroke-width="0.8"/>
+    <line x1="-69" y1="-40" x2="69" y2="40" stroke="#1e293b" stroke-width="0.8"/>
+    <line x1="-69" y1="40" x2="69" y2="-40" stroke="#1e293b" stroke-width="0.8"/>
 
-    <!-- Isometric Concentric Ellipse Rings -->
-    <ellipse cx="0" cy="0" rx="25" ry="12" fill="none" stroke="#162534" stroke-width="1"/>
-    <ellipse cx="0" cy="0" rx="48" ry="24" fill="none" stroke="#1c2d3e" stroke-width="1"/>
-    <ellipse cx="0" cy="0" rx="72" ry="36" fill="none" stroke="#253a50" stroke-width="1.2"/>
-    <!-- Outer energy ring -->
-    <ellipse class="energy-ring" cx="0" cy="0" rx="82" ry="42" stroke="#10b981" stroke-width="0.6" stroke-dasharray="4 6" opacity="0.2"/>
+    <!-- DATA polygon: Vision=96→77, KeyPass=93→74, Spatial=96→77, PressRes=94→75, Tempo=92→74, Threat=84→67 -->
+    <polygon points="0,-77 64,-37 64,37 0,67 -64,37 -64,-37" fill="url(#radarFill2)" stroke="#00ff87" stroke-width="2" opacity="0.9"/>
 
-    <!-- 6 3D Spatial Axes -->
-    <line x1="0" y1="0" x2="0" y2="-52" stroke="#1c2d3e" stroke-width="1"/>
-    <line x1="0" y1="0" x2="62" y2="-20" stroke="#1c2d3e" stroke-width="1"/>
-    <line x1="0" y1="0" x2="62" y2="20" stroke="#1c2d3e" stroke-width="1"/>
-    <line x1="0" y1="0" x2="0" y2="52" stroke="#1c2d3e" stroke-width="1"/>
-    <line x1="0" y1="0" x2="-62" y2="20" stroke="#1c2d3e" stroke-width="1"/>
-    <line x1="0" y1="0" x2="-62" y2="-20" stroke="#1c2d3e" stroke-width="1"/>
+    <!-- Axis labels with values -->
+    <text x="0" y="-90" text-anchor="middle" font-family="monospace" font-size="10" fill="#00ff87" font-weight="600">Spatial IQ</text>
+    <text x="0" y="-78" text-anchor="middle" font-family="monospace" font-size="9" fill="#00ff87">96</text>
+    <circle cx="0" cy="-77" r="4" fill="#00ff87" filter="url(#glow2)"/>
 
-    <!-- 3D Spatial Attribute Polyhedron with dual fill -->
-    <polygon points="0,-50 58,-19 56,18 0,46 -58,19 -56,-18" fill="url(#radarFill)" stroke="#10b981" stroke-width="2" filter="url(#glowF)"/>
-    <!-- Inner highlight polygon -->
-    <polygon points="0,-38 44,-14 42,14 0,35 -44,14 -42,-14" fill="#10b981" fill-opacity="0.06" stroke="#10b981" stroke-width="0.6" stroke-dasharray="2 3"/>
+    <text x="88" y="-43" text-anchor="start" font-family="monospace" font-size="10" fill="#00d4ff" font-weight="600">Vision</text>
+    <text x="88" y="-31" text-anchor="start" font-family="monospace" font-size="9" fill="#00d4ff">96</text>
+    <circle cx="64" cy="-37" r="4" fill="#00d4ff" filter="url(#glow2)"/>
 
-    <!-- Vertical 3D Z-Axis Elevation Needle -->
-    <line x1="0" y1="0" x2="0" y2="-50" stroke="#34d399" stroke-width="1.5" stroke-dasharray="2 2"/>
-    <circle cx="0" cy="-25" r="1.5" fill="#34d399" opacity="0.6"/>
+    <text x="88" y="44" text-anchor="start" font-family="monospace" font-size="10" fill="#ffb800" font-weight="600">Key Pass</text>
+    <text x="88" y="56" text-anchor="start" font-family="monospace" font-size="9" fill="#ffb800">93</text>
+    <circle cx="64" cy="37" r="4" fill="#ffb800" filter="url(#glow2)"/>
 
-    <!-- Node Labels & Glowing Badges -->
-    <!-- Top: Spatial IQ (96) -->
-    <text x="0" y="-60" text-anchor="middle" font-family="ui-monospace, monospace" font-size="9.5" font-weight="600" fill="#34d399">Spatial IQ · 96</text>
-    <circle cx="0" cy="-50" r="3.5" fill="#ffffff" filter="url(#glowF)"/>
+    <text x="0" y="90" text-anchor="middle" font-family="monospace" font-size="10" fill="#00ff87" font-weight="600">Press Resist</text>
+    <text x="0" y="102" text-anchor="middle" font-family="monospace" font-size="9" fill="#00ff87">94</text>
+    <circle cx="0" cy="67" r="4" fill="#00ff87" filter="url(#glow2)"/>
 
-    <!-- Top Right: Vision (96) -->
-    <text x="68" y="-22" text-anchor="start" font-family="ui-monospace, monospace" font-size="9" fill="#94a3b8">Vision <tspan fill="#38bdf8" font-weight="600">96</tspan></text>
-    <circle cx="58" cy="-19" r="3" fill="#38bdf8" filter="url(#glowF)"/>
+    <text x="-88" y="44" text-anchor="end" font-family="monospace" font-size="10" fill="#a78bfa" font-weight="600">Tempo</text>
+    <text x="-88" y="56" text-anchor="end" font-family="monospace" font-size="9" fill="#a78bfa">92</text>
+    <circle cx="-64" cy="37" r="4" fill="#a78bfa" filter="url(#glow2)"/>
 
-    <!-- Bottom Right: Key Pass (93) -->
-    <text x="68" y="24" text-anchor="start" font-family="ui-monospace, monospace" font-size="9" fill="#94a3b8">Key Pass <tspan fill="#fbbf24" font-weight="600">93</tspan></text>
-    <circle cx="56" cy="18" r="3" fill="#fbbf24" filter="url(#glowF)"/>
+    <text x="-88" y="-43" text-anchor="end" font-family="monospace" font-size="10" fill="#ef4444" font-weight="600">Threat</text>
+    <text x="-88" y="-31" text-anchor="end" font-family="monospace" font-size="9" fill="#ef4444">84</text>
+    <circle cx="-64" cy="-37" r="4" fill="#ef4444" filter="url(#glow2)"/>
 
-    <!-- Bottom: Press Resist (94) -->
-    <text x="0" y="66" text-anchor="middle" font-family="ui-monospace, monospace" font-size="9.5" fill="#94a3b8">Press Resist · <tspan fill="#34d399" font-weight="600">94</tspan></text>
-    <circle cx="0" cy="46" r="3" fill="#34d399" filter="url(#glowF)"/>
-
-    <!-- Bottom Left: Match Tempo (92) -->
-    <text x="-68" y="24" text-anchor="end" font-family="ui-monospace, monospace" font-size="9" fill="#94a3b8"><tspan fill="#a78bfa" font-weight="600">92</tspan> Tempo</text>
-    <circle cx="-58" cy="19" r="3" fill="#a78bfa" filter="url(#glowF)"/>
-
-    <!-- Top Left: Box Threat (84) -->
-    <text x="-68" y="-22" text-anchor="end" font-family="ui-monospace, monospace" font-size="9" fill="#94a3b8"><tspan fill="#f43f5e" font-weight="600">84</tspan> Threat</text>
-    <circle cx="-56" cy="-18" r="3" fill="#f43f5e" filter="url(#glowF)"/>
+    <!-- Center dot -->
+    <circle cx="0" cy="0" r="3" fill="#ffffff"/>
   </g>
+
+  <!-- Bottom stat -->
+  <text x="14" y="265" font-family="'Segoe UI', sans-serif" font-size="11.5" fill="#64748b">Overall Rating: <tspan fill="#00ff87" font-weight="700">92.5</tspan>  ·  PPDA: <tspan fill="#ffb800" font-weight="700">7.8</tspan>  ·  xT: <tspan fill="#00d4ff" font-weight="700">+1.64</tspan></text>
+</g>
+
 </g>
 </svg>
