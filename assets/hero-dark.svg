@@ -7,7 +7,6 @@
 @keyframes ringPulse{0%{r:4;opacity:0.95}100%{r:18;opacity:0}}
 @keyframes heatBreathe{0%,100%{opacity:0.1;transform:scale(0.96)}50%{opacity:0.28;transform:scale(1.06)}}
 @keyframes flowDash{to{stroke-dashoffset:-32}}
-@keyframes waveMove{0%{transform:translateX(0)}100%{transform:translateX(-80px)}}
 @keyframes goalFlash{0%,75%{opacity:0;transform:scale(0.8)}82%,94%{opacity:1;transform:scale(1.1)}100%{opacity:0;transform:scale(1)}}
 @keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
 
@@ -30,7 +29,7 @@
 .r5{animation:rise .8s .6s ease-out both}
 
 .tactical-node{transition:all .3s ease;cursor:pointer}
-.tactical-node:hover{transform:scale(1.15);filter:drop-shadow(0 0 8px #10b981)}
+.tactical-node:hover{transform:scale(1.12);filter:drop-shadow(0 0 8px #10b981)}
 .chip{transition:all .25s ease;cursor:pointer}
 .chip:hover{stroke:#10b981;filter:drop-shadow(0 0 6px rgba(16,185,129,0.3))}
 </style>
@@ -89,8 +88,8 @@
 <g class="r1">
   <circle class="live" cx="68" cy="74" r="3.5" fill="#10b981"/>
   <text x="82" y="79" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="13.5" fill="#64748b">~/akshaysharma2005</text>
-  <rect x="234" y="65" width="104" height="20" rx="10" fill="#0c1924" stroke="#1e2c3d"/>
-  <text x="286" y="79" text-anchor="middle" font-family="ui-monospace, monospace" font-size="10.5" fill="#38bdf8">● SYSTEM READY</text>
+  <rect x="246" y="65" width="108" height="20" rx="10" fill="#0c1924" stroke="#1e2c3d"/>
+  <text x="300" y="79" text-anchor="middle" font-family="ui-monospace, monospace" font-size="10.5" fill="#38bdf8">● SYSTEM READY</text>
 </g>
 
 <text class="r2" x="62" y="146" font-family="'Iowan Old Style', 'Palatino Linotype', Palatino, 'Book Antiqua', Georgia, serif" font-size="52" font-weight="400" letter-spacing="-1.2" fill="#f1f5f9">M Akshay Sharma</text>
@@ -101,40 +100,44 @@
   Full-Stack Developer
 </text>
 
+<!-- Terminal Command Box -->
 <g class="r4">
   <rect x="64" y="222" width="580" height="42" rx="10" fill="#0b131c" stroke="#1c2d3e"/>
   <text x="82" y="248" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="16" fill="#64748b">
     <tspan fill="#10b981">$</tspan> now analyzing
   </text>
-  <text class="w0" x="256" y="248" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="16" fill="#f1f5f9">
+  <text class="w0" x="250" y="248" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="16" fill="#f1f5f9">
     SoundPulse Streams (8k+ events)<tspan class="cur" fill="#10b981">▍</tspan>
   </text>
-  <text class="w1" x="256" y="248" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="16" fill="#34d399">
+  <text class="w1" x="250" y="248" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="16" fill="#34d399">
     Football xG &amp; Spatial Tracking ⚽<tspan class="cur" fill="#10b981">▍</tspan>
   </text>
-  <text class="w2" x="256" y="248" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="16" fill="#38bdf8">
+  <text class="w2" x="250" y="248" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="16" fill="#38bdf8">
     Healthcare HMIS Trends &amp; EDA<tspan class="cur" fill="#10b981">▍</tspan>
   </text>
-  <text class="w3" x="256" y="248" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="16" fill="#fbbf24">
+  <text class="w3" x="250" y="248" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="16" fill="#fbbf24">
     AWS Cloud &amp; MERN Architecture<tspan class="cur" fill="#10b981">▍</tspan>
   </text>
 </g>
 
-<!-- Profile Badges with Interactive Chips -->
+<!-- Profile Badges with Perfectly Sized & Centered Chips -->
 <g class="r5">
+  <!-- Badge 1: VIT-AP CSE -->
   <g class="chip">
-    <rect x="64" y="286" width="216" height="30" rx="15" fill="#0f1923" stroke="#1e2c3d"/>
-    <text x="78" y="306" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="12" fill="#94a3b8">🎓 CSE (Data Analytics) · VIT-AP</text>
+    <rect x="64" y="286" width="220" height="30" rx="15" fill="#0f1923" stroke="#1e2c3d"/>
+    <text x="174" y="305.5" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="500" fill="#94a3b8">🎓 CSE (Data Analytics) · VIT-AP</text>
   </g>
   
+  <!-- Badge 2: AWS -->
   <g class="chip">
-    <rect x="290" y="286" width="200" height="30" rx="15" fill="#0f1923" stroke="#1e2c3d"/>
-    <text x="304" y="306" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="12" fill="#94a3b8">☁️ AWS Academy Graduate</text>
+    <rect x="294" y="286" width="186" height="30" rx="15" fill="#0f1923" stroke="#1e2c3d"/>
+    <text x="387" y="305.5" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="500" fill="#94a3b8">☁️ AWS Academy Graduate</text>
   </g>
 
+  <!-- Badge 3: Football Analytics -->
   <g class="chip">
-    <rect x="500" y="286" width="180" height="30" rx="15" fill="#0d241d" stroke="#10b981" stroke-opacity="0.45"/>
-    <text x="514" y="306" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="12" fill="#34d399">⚽ Football Analytics &amp; xG</text>
+    <rect x="490" y="286" width="168" height="30" rx="15" fill="#0d241d" stroke="#10b981" stroke-opacity="0.45"/>
+    <text x="574" y="305.5" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="500" fill="#34d399">⚽ Football Analytics &amp; xG</text>
   </g>
 
   <!-- Quick Bio Tagline -->
@@ -223,12 +226,12 @@
       <text x="1165" y="195" text-anchor="middle" font-family="ui-monospace, monospace" font-size="11" font-weight="700" fill="#34d399">GOAL! ⚽</text>
     </g>
 
-    <!-- Tactical Nodes with Pulse Rings & Hover Physics -->
+    <!-- Tactical Nodes with Pulse Rings & Ample Padding (No text clipping) -->
     <!-- Node 1: CDM -->
     <g class="tactical-node" transform="translate(845, 258)">
       <circle class="pulse-ring" cx="0" cy="0" r="4" fill="none" stroke="#38bdf8" stroke-width="1.5"/>
       <circle cx="0" cy="0" r="5" fill="#38bdf8"/>
-      <rect x="-38" y="10" width="76" height="20" rx="10" fill="#081018" stroke="#1e2c3d" opacity="0.95"/>
+      <rect x="-44" y="10" width="88" height="20" rx="10" fill="#081018" stroke="#1e2c3d" opacity="0.95"/>
       <text x="0" y="24" text-anchor="middle" font-family="ui-monospace, monospace" font-size="10.5" fill="#94a3b8">CDM · 94%</text>
     </g>
 
@@ -236,7 +239,7 @@
     <g class="tactical-node" transform="translate(945, 170)">
       <circle class="pulse-ring" cx="0" cy="0" r="4" fill="none" stroke="#38bdf8" stroke-width="1.5" style="animation-delay: 1.05s;"/>
       <circle cx="0" cy="0" r="5.5" fill="#38bdf8"/>
-      <rect x="-46" y="-28" width="92" height="20" rx="10" fill="#081018" stroke="#38bdf8" stroke-opacity="0.5" opacity="0.95"/>
+      <rect x="-52" y="-28" width="104" height="20" rx="10" fill="#081018" stroke="#38bdf8" stroke-opacity="0.5" opacity="0.95"/>
       <text x="0" y="-14" text-anchor="middle" font-family="ui-monospace, monospace" font-size="10.5" font-weight="600" fill="#38bdf8">xT +0.42 · CAM</text>
     </g>
 
@@ -244,7 +247,7 @@
     <g class="tactical-node" transform="translate(1055, 162)">
       <circle class="pulse-ring" cx="0" cy="0" r="4" fill="none" stroke="#10b981" stroke-width="1.5" style="animation-delay: 2.1s;"/>
       <circle cx="0" cy="0" r="5" fill="#10b981"/>
-      <rect x="-44" y="-28" width="88" height="20" rx="10" fill="#081018" stroke="#1e2c3d" opacity="0.95"/>
+      <rect x="-48" y="-28" width="96" height="20" rx="10" fill="#081018" stroke="#1e2c3d" opacity="0.95"/>
       <text x="0" y="-14" text-anchor="middle" font-family="ui-monospace, monospace" font-size="10.5" fill="#34d399">Key Cross · RW</text>
     </g>
 
@@ -252,19 +255,19 @@
     <g class="tactical-node" transform="translate(1152, 216)">
       <circle class="pulse-ring" cx="0" cy="0" r="4" fill="none" stroke="#fbbf24" stroke-width="1.5" style="animation-delay: 3.15s;"/>
       <circle cx="0" cy="0" r="6" fill="#fbbf24"/>
-      <rect x="-46" y="10" width="92" height="20" rx="10" fill="#141108" stroke="#fbbf24" stroke-opacity="0.6" opacity="0.95"/>
+      <rect x="-50" y="10" width="100" height="20" rx="10" fill="#141108" stroke="#fbbf24" stroke-opacity="0.6" opacity="0.95"/>
       <text x="0" y="24" text-anchor="middle" font-family="ui-monospace, monospace" font-size="10.5" font-weight="600" fill="#fbbf24">xG 0.84 🎯</text>
     </g>
   </g>
   <rect x="736" y="98" width="480" height="236" rx="14" fill="none" stroke="#1a2b3c"/>
 
-  <!-- Live Match Momentum Mini-Bar at Pitch Base -->
+  <!-- Live Match Momentum Bar (Spaced cleanly without overlap) -->
   <g transform="translate(736, 348)">
     <text x="0" y="14" font-family="ui-monospace, monospace" font-size="11" fill="#64748b">MOMENTUM:</text>
-    <rect x="74" y="5" width="260" height="10" rx="5" fill="#0c1520" stroke="#1c2d3e"/>
-    <rect x="74" y="5" width="194" height="10" rx="5" fill="url(#radarBeam)"/>
-    <text x="342" y="14" font-family="ui-monospace, monospace" font-size="11" font-weight="600" fill="#34d399">+74.6% ATTACK BIAS</text>
-    <text x="480" y="14" text-anchor="end" font-family="ui-monospace, monospace" font-size="11" fill="#64748b">OPTA/STATS DATA ↗</text>
+    <rect x="76" y="5" width="130" height="9" rx="4.5" fill="#0c1520" stroke="#1c2d3e"/>
+    <rect x="76" y="5" width="96" height="9" rx="4.5" fill="url(#radarBeam)"/>
+    <text x="216" y="14" font-family="ui-monospace, monospace" font-size="11" font-weight="600" fill="#34d399">+74.6% ATTACK</text>
+    <text x="480" y="14" text-anchor="end" font-family="ui-monospace, monospace" font-size="11" fill="#64748b">OPTA DATA ↗</text>
   </g>
 </g>
 </svg>
