@@ -5,7 +5,7 @@
   <img src="./assets/hero-light-3d.svg" width="100%" alt="M Akshay Sharma — Data Analytics Specialist · Full-Stack Developer">
 </picture>
 
-**[GitHub](https://github.com/akshaysharma2005)** &nbsp;·&nbsp; **[LinkedIn](https://www.linkedin.com/in/m-akshay-sharma-a7414b367/)** &nbsp;·&nbsp; **[Email](mailto:akshaysharma200508@gmail.com)** &nbsp;·&nbsp; **[Resume](https://drive.google.com/file/d/1kAvZECBbI3gPE6oZu3TbyU5W4GwPmVf-/view?usp=sharing)**
+**[GitHub](https://github.com/akshaysharma2005)** &nbsp;·&nbsp; **[LinkedIn](https://www.linkedin.com/in/m-akshay-sharma-a7414b367/)** &nbsp;·&nbsp; **[Email](mailto:akshaysharma200508@gmail.com)** &nbsp;·&nbsp; **[Resume](https://drive.google.com/file/d/1kAvZECBbI3gPE6oZu3TbyU5W4GwPmVf-/view?usp=sharing)** &nbsp;·&nbsp; **[Portfolio](https://portfolio-inky-beta-bf6gy02tzy.vercel.app)**
 
 </div>
 
@@ -14,6 +14,23 @@
 Computer Science undergraduate specializing in **Data Analytics** at **VIT-AP University**, Amaravati (CGPA: 8.32/10). I combine data-driven problem solving with modern full-stack development: designing optimized **SQL queries & analytical dashboards**, processing large datasets in **Python (Pandas, Matplotlib, Seaborn)**, and engineering responsive web apps using the **MERN stack** and **AWS cloud infrastructure**.
 
 Passionate **football tactician and sports analytics enthusiast** — dissecting matchday spatial event logs, pass probability networks, and Expected Goals (xG) models at the intersection of athletics and computation. Actively seeking **Software Development** or **Data Science / Analytics** internship and engineering opportunities.
+
+### 🏏 Interactive 3D Portfolio (Cricket Edition)
+
+<p align="center">
+  <a href="https://portfolio-inky-beta-bf6gy02tzy.vercel.app" target="_blank">
+    <img src="https://img.shields.io/badge/Live%20Portfolio-portfolio--inky--beta--bf6gy02tzy.vercel.app-00E575?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Portfolio">
+  </a>
+</p>
+
+Bespoke **Cricket-themed 3D Web Portfolio** engineered with **Three.js**, **Vite**, and **Lenis**:
+- 🏟️ **Opening Delivery**: Procedural 3D leather ball delivery under floodlights with flashing LED Zing wickets.
+- 🧭 **Career Wagon Wheel**: Interactive cricket ground mapping academic and engineering milestones to iconic boundary shots.
+- 🏏 **Technical Disciplines**: 3D pitch stage with orbiting camera perspectives and dynamic SVG telemetry lines.
+
+👉 **[Launch Live Portfolio](https://portfolio-inky-beta-bf6gy02tzy.vercel.app)**
+
+<br/>
 
 ### Selected work
 
