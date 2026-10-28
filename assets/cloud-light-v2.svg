@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="210" viewBox="0 0 600 210" role="img" aria-label="Cloud &amp; MERN Stack Applications">
+<style>
+@keyframes sweep{0%{transform:translateX(-120px)}60%,100%{transform:translateX(720px)}}
+@keyframes live{0%,100%{opacity:1}50%{opacity:.35}}
+@keyframes streamPkt{0%{transform:translateX(0);opacity:0}20%{opacity:1}80%{opacity:1}100%{transform:translateX(56px);opacity:0}}
+.sweep{animation:sweep 6s ease-in-out infinite}
+.live{animation:live 1.6s ease-in-out infinite}
+.packet{animation:streamPkt 2s linear infinite}
+.card{transition:all .3s ease;cursor:pointer}
+.card:hover{stroke:#d97706;filter:drop-shadow(0 0 12px rgba(217,119,6,0.2))}
+</style>
+<defs>
+<linearGradient id="barCLight" x1="0" x2="1"><stop offset="0" stop-color="#d97706"/><stop offset="1" stop-color="#d97706" stop-opacity="0"/></linearGradient>
+<linearGradient id="shineCLight" x1="0" x2="1"><stop offset="0" stop-color="#d97706" stop-opacity="0"/><stop offset=".5" stop-color="#d97706" stop-opacity=".08"/><stop offset="1" stop-color="#d97706" stop-opacity="0"/></linearGradient>
+<clipPath id="c"><rect x="1" y="1" width="598" height="208" rx="18"/></clipPath>
+</defs>
+<g clip-path="url(#c)">
+<rect width="600" height="210" fill="#ffffff"/>
+<rect class="sweep" x="0" y="0" width="120" height="210" fill="url(#shineCLight)"/>
+<rect x="28" y="0" width="70" height="2" fill="#d97706"/>
+</g>
+<rect class="card" x="0.5" y="0.5" width="599" height="209" rx="18" fill="none" stroke="#e2e8f0"/>
+
+<!-- Title -->
+<text x="28" y="52" font-family="'Iowan Old Style', 'Palatino Linotype', Palatino, serif" font-size="27" font-weight="400" letter-spacing="-0.3" fill="#0f172a">Cloud &amp; MERN Stack</text>
+
+<!-- Live Cloud Sync Pipeline Animation -->
+<g transform="translate(360, 32)">
+  <!-- Cloud Icon Outline -->
+  <path d="M 6 18 A 6 6 0 0 1 12 12 A 8 8 0 0 1 24 10 A 7 7 0 0 1 30 18 Z" fill="#f8fafc" stroke="#d97706" stroke-width="1.2"/>
+  <!-- Pipeline to DB -->
+  <line x1="30" y1="16" x2="86" y2="16" stroke="#d97706" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.6"/>
+  <!-- Streaming Packet -->
+  <g class="packet">
+    <circle cx="30" cy="16" r="2.5" fill="#0f172a"/>
+  </g>
+  <!-- DB Cylinder -->
+  <rect x="86" y="8" width="14" height="16" rx="3" fill="#f8fafc" stroke="#d97706" stroke-width="1.2"/>
+</g>
+
+<!-- Status Pill -->
+<rect x="444" y="32" width="128" height="26" rx="13" fill="#fffbeb" stroke="#fde68a"/>
+<circle class="live" cx="458" cy="45" r="3" fill="#d97706"/>
+<text x="468" y="49.5" font-family="ui-monospace, monospace" font-size="11.5" font-weight="600" fill="#d97706">AWS Certified</text>
+
+<!-- Description -->
+<text y="92" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="14.5" fill="#475569">
+<tspan x="28" dy="0">Scalable full-stack systems designed with React, Node.js, Express,</tspan>
+<tspan x="28" dy="22">MongoDB, secure JWT auth, and cloud-native AWS architecture.</tspan>
+</text>
+
+<!-- Tech Badges -->
+<rect x="28" y="140" width="116" height="28" rx="14" fill="#f8fafc" stroke="#e2e8f0"/><text x="41" y="158.5" font-family="ui-monospace, monospace" font-size="12" fill="#475569">AWS EC2/S3</text>
+<rect x="150.2" y="140" width="76" height="28" rx="14" fill="#f8fafc" stroke="#e2e8f0"/><text x="163.2" y="158.5" font-family="ui-monospace, monospace" font-size="12" fill="#475569">React.js</text>
+<rect x="232.4" y="140" width="76" height="28" rx="14" fill="#f8fafc" stroke="#e2e8f0"/><text x="245.4" y="158.5" font-family="ui-monospace, monospace" font-size="12" fill="#475569">Node.js</text>
+<rect x="314.6" y="140" width="86" height="28" rx="14" fill="#f8fafc" stroke="#e2e8f0"/><text x="327.6" y="158.5" font-family="ui-monospace, monospace" font-size="12" fill="#475569">MongoDB</text>
+<rect x="406.8" y="140" width="90" height="28" rx="14" fill="#f8fafc" stroke="#e2e8f0"/><text x="419.8" y="158.5" font-family="ui-monospace, monospace" font-size="12" fill="#475569">REST APIs</text>
+
+<text x="572" y="188" text-anchor="end" font-family="ui-monospace, monospace" font-size="11.5" fill="#64748b">credly.com/badges/aws ↗</text>
+</svg>

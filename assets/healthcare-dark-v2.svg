@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="210" viewBox="0 0 600 210" role="img" aria-label="Healthcare Data Analysis — HMIS Dataset">
+<style>
+@keyframes sweep{0%{transform:translateX(-120px)}60%,100%{transform:translateX(720px)}}
+@keyframes live{0%,100%{opacity:1}50%{opacity:.35}}
+@keyframes pulseDot{0%{transform:translateX(0);opacity:0}20%{opacity:1}80%{opacity:1}100%{transform:translateX(80px);opacity:0}}
+.sweep{animation:sweep 6s ease-in-out infinite}
+.live{animation:live 1.6s ease-in-out infinite}
+.ecg-dot{animation:pulseDot 2.4s linear infinite}
+.card{transition:all .3s ease;cursor:pointer}
+.card:hover{stroke:#38bdf8;filter:drop-shadow(0 0 12px rgba(56,189,248,0.25))}
+</style>
+<defs>
+<linearGradient id="barH" x1="0" x2="1"><stop offset="0" stop-color="#38bdf8"/><stop offset="1" stop-color="#38bdf8" stop-opacity="0"/></linearGradient>
+<linearGradient id="shineH" x1="0" x2="1"><stop offset="0" stop-color="#38bdf8" stop-opacity="0"/><stop offset=".5" stop-color="#38bdf8" stop-opacity=".08"/><stop offset="1" stop-color="#38bdf8" stop-opacity="0"/></linearGradient>
+<clipPath id="c"><rect x="1" y="1" width="598" height="208" rx="18"/></clipPath>
+</defs>
+<g clip-path="url(#c)">
+<rect width="600" height="210" fill="#0b1118"/>
+<rect class="sweep" x="0" y="0" width="120" height="210" fill="url(#shineH)"/>
+<rect x="28" y="0" width="70" height="2" fill="#38bdf8"/>
+</g>
+<rect class="card" x="0.5" y="0.5" width="599" height="209" rx="18" fill="none" stroke="#1e2c3d"/>
+
+<!-- Title -->
+<text x="28" y="52" font-family="'Iowan Old Style', 'Palatino Linotype', Palatino, serif" font-size="27" font-weight="400" letter-spacing="-0.3" fill="#f1f5f9">Healthcare Analytics</text>
+
+<!-- Live ECG Heartbeat / Trend Wave Animation -->
+<g transform="translate(360, 32)">
+  <path d="M 0 14 L 18 14 L 24 3 L 30 25 L 36 10 L 42 16 L 46 14 L 80 14" fill="none" stroke="#38bdf8" stroke-width="1.8" opacity="0.8"/>
+  <g class="ecg-dot">
+    <circle cx="0" cy="14" r="3" fill="#ffffff"/>
+  </g>
+</g>
+
+<!-- Status Pill -->
+<rect x="470" y="32" width="102" height="26" rx="13" fill="#0c1d29" stroke="#38bdf8" stroke-opacity="0.4"/>
+<circle class="live" cx="484" cy="45" r="3" fill="#38bdf8"/>
+<text x="494" y="49.5" font-family="ui-monospace, monospace" font-size="11.5" font-weight="600" fill="#38bdf8">HMIS Study</text>
+
+<!-- Description -->
+<text y="92" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="14.5" fill="#94a3b8">
+<tspan x="28" dy="0">Cleaned &amp; modeled public healthcare datasets with Python &amp; Pandas;</tspan>
+<tspan x="28" dy="22">deep exploratory data analysis (EDA) for epidemiological insights.</tspan>
+</text>
+
+<!-- Tech Badges -->
+<rect x="28" y="140" width="72" height="28" rx="14" fill="#0f1923" stroke="#1e2c3d"/><text x="41" y="158.5" font-family="ui-monospace, monospace" font-size="12" fill="#94a3b8">Python</text>
+<rect x="106.2" y="140" width="76" height="28" rx="14" fill="#0f1923" stroke="#1e2c3d"/><text x="119.2" y="158.5" font-family="ui-monospace, monospace" font-size="12" fill="#94a3b8">Pandas</text>
+<rect x="188.4" y="140" width="54" height="28" rx="14" fill="#0f1923" stroke="#1e2c3d"/><text x="201.4" y="158.5" font-family="ui-monospace, monospace" font-size="12" fill="#94a3b8">EDA</text>
+<rect x="248.6" y="140" width="90" height="28" rx="14" fill="#0f1923" stroke="#1e2c3d"/><text x="261.6" y="158.5" font-family="ui-monospace, monospace" font-size="12" fill="#94a3b8">Matplotlib</text>
+<rect x="344.8" y="140" width="84" height="28" rx="14" fill="#0f1923" stroke="#1e2c3d"/><text x="357.8" y="158.5" font-family="ui-monospace, monospace" font-size="12" fill="#94a3b8">Seaborn</text>
+<rect x="435" y="140" width="62" height="28" rx="14" fill="#0f1923" stroke="#1e2c3d"/><text x="448" y="158.5" font-family="ui-monospace, monospace" font-size="12" fill="#94a3b8">Excel</text>
+
+<text x="572" y="188" text-anchor="end" font-family="ui-monospace, monospace" font-size="11.5" fill="#64748b">HMIS Study (Google Drive) ↗</text>
+</svg>

@@ -1,8 +1,8 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/hero-dark.svg">
-  <img src="./assets/hero-light.svg" width="100%" alt="M Akshay Sharma — Data Analytics Specialist · Full-Stack Developer">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/hero-dark-v2.svg">
+  <img src="./assets/hero-light-v2.svg" width="100%" alt="M Akshay Sharma — Data Analytics Specialist · Full-Stack Developer">
 </picture>
 
 **[GitHub](https://github.com/akshaysharma2005)** &nbsp;·&nbsp; **[LinkedIn](https://www.linkedin.com/in/m-akshay-sharma-a7414b367/)** &nbsp;·&nbsp; **[Email](mailto:akshaysharma200508@gmail.com)** &nbsp;·&nbsp; **[Resume](https://drive.google.com/file/d/1kAvZECBbI3gPE6oZu3TbyU5W4GwPmVf-/view?usp=sharing)**
@@ -18,15 +18,15 @@ Passionate **football tactician and sports analytics enthusiast** — dissecting
 ### Selected work
 
 <p align="center">
-<a href="https://soundpulse-1.onrender.com/"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/soundpulse-dark.svg"><img src="./assets/soundpulse-light.svg" width="49%" alt="SoundPulse — Music Streaming Analytics"></picture></a>&nbsp;<a href="https://github.com/akshaysharma2005/football-analytics"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/football-dark.svg"><img src="./assets/football-light.svg" width="49%" alt="PitchPulse — Football Tactical and xG Analytics"></picture></a>
-<a href="https://drive.google.com/file/d/1-LLqf_7I9KnQ3wuPdkXstDBYjI5Mj0wT/view"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/healthcare-dark.svg"><img src="./assets/healthcare-light.svg" width="49%" alt="Healthcare Data Analysis — HMIS Dataset"></picture></a>&nbsp;<a href="https://www.credly.com/badges/b9e4c77d-96ca-4aa7-a0d2-e8e91158c7ed/public_url"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/cloud-dark.svg"><img src="./assets/cloud-light.svg" width="49%" alt="Cloud Architecture and Full Stack Web Apps"></picture></a>
+<a href="https://soundpulse-1.onrender.com/"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/soundpulse-dark-v2.svg"><img src="./assets/soundpulse-light-v2.svg" width="49%" alt="SoundPulse — Music Streaming Analytics"></picture></a>&nbsp;<a href="https://github.com/akshaysharma2005/football-analytics"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/football-dark-v2.svg"><img src="./assets/football-light-v2.svg" width="49%" alt="PitchPulse — Football Tactical and xG Analytics"></picture></a>
+<a href="https://drive.google.com/file/d/1-LLqf_7I9KnQ3wuPdkXstDBYjI5Mj0wT/view"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/healthcare-dark-v2.svg"><img src="./assets/healthcare-light-v2.svg" width="49%" alt="Healthcare Data Analysis — HMIS Dataset"></picture></a>&nbsp;<a href="https://www.credly.com/badges/b9e4c77d-96ca-4aa7-a0d2-e8e91158c7ed/public_url"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/cloud-dark-v2.svg"><img src="./assets/cloud-light-v2.svg" width="49%" alt="Cloud Architecture and Full Stack Web Apps"></picture></a>
 </p>
 
 ### The Beautiful Game · Football Analytics
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/football-matrix-dark.svg">
-  <img src="./assets/football-matrix-light.svg" width="100%" alt="Football Analytics Lab — Tactical Matrix, xG Engine, and Playmaker Mindset">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/football-matrix-dark-v2.svg">
+  <img src="./assets/football-matrix-light-v2.svg" width="100%" alt="Football Analytics Lab — Tactical Matrix, xG Engine, and Playmaker Mindset">
 </picture>
 
 <br/>
@@ -34,8 +34,8 @@ Passionate **football tactician and sports analytics enthusiast** — dissecting
 ### Toolkit
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/toolkit-dark.svg">
-  <img src="./assets/toolkit-light.svg" width="100%" alt="Toolkit — Data & Analytics: SQL, Pandas, Matplotlib, Seaborn, EDA, Chart.js · Languages: Python, Java, JavaScript, R, SQL · Web: React.js, Node.js, Express.js, REST APIs · Cloud & Storage: AWS EC2/S3, MongoDB, Git, JWT">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/toolkit-dark-v2.svg">
+  <img src="./assets/toolkit-light-v2.svg" width="100%" alt="Toolkit — Data & Analytics: SQL, Pandas, Matplotlib, Seaborn, EDA, Chart.js · Languages: Python, Java, JavaScript, R, SQL · Web: React.js, Node.js, Express.js, REST APIs · Cloud & Storage: AWS EC2/S3, MongoDB, Git, JWT">
 </picture>
 
 <br/>

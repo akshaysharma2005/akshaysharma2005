@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="210" viewBox="0 0 600 210" role="img" aria-label="PitchPulse — Football Tactical and xG Analytics Engine">
+<style>
+@keyframes sweep{0%{transform:translateX(-120px)}60%,100%{transform:translateX(720px)}}
+@keyframes live{0%,100%{opacity:1}50%{opacity:.35}}
+@keyframes ballCurve{0%{transform:translate(0,0);opacity:0}15%{opacity:1}80%{transform:translate(75px,-18px);opacity:1}90%,100%{transform:translate(82px,-18px);opacity:0}}
+@keyframes netShake{0%,75%{transform:scale(1)}82%{transform:scale(1.15) rotate(2deg)}90%{transform:scale(1)}}
+.sweep{animation:sweep 6s ease-in-out infinite}
+.live{animation:live 1.6s ease-in-out infinite}
+.ball-shot{animation:ballCurve 3s ease-in-out infinite}
+.net-target{animation:netShake 3s ease-in-out infinite;transform-origin:445px 36px}
+.card{transition:all .3s ease;cursor:pointer}
+.card:hover{stroke:#10b981;filter:drop-shadow(0 0 12px rgba(16,185,129,0.25))}
+</style>
+<defs>
+<linearGradient id="barF" x1="0" x2="1"><stop offset="0" stop-color="#10b981"/><stop offset="1" stop-color="#10b981" stop-opacity="0"/></linearGradient>
+<linearGradient id="shineF" x1="0" x2="1"><stop offset="0" stop-color="#10b981" stop-opacity="0"/><stop offset=".5" stop-color="#10b981" stop-opacity=".08"/><stop offset="1" stop-color="#10b981" stop-opacity="0"/></linearGradient>
+<filter id="glowBall" x="-50%" y="-50%" width="200%" height="200%">
+  <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+  <feMerge>
+    <feMergeNode in="coloredBlur"/>
+    <feMergeNode in="SourceGraphic"/>
+  </feMerge>
+</filter>
+<clipPath id="c"><rect x="1" y="1" width="598" height="208" rx="18"/></clipPath>
+</defs>
+<g clip-path="url(#c)">
+<rect width="600" height="210" fill="#0b1118"/>
+<rect class="sweep" x="0" y="0" width="120" height="210" fill="url(#shineF)"/>
+<rect x="28" y="0" width="70" height="2" fill="#10b981"/>
+</g>
+<rect class="card" x="0.5" y="0.5" width="599" height="209" rx="18" fill="none" stroke="#1e2c3d"/>
+
+<!-- Title -->
+<text x="28" y="52" font-family="'Iowan Old Style', 'Palatino Linotype', Palatino, serif" font-size="27" font-weight="400" letter-spacing="-0.3" fill="#f1f5f9">PitchPulse ⚽</text>
+
+<!-- Animated Shot & Goal Telemetry Preview -->
+<g transform="translate(330, 26)">
+  <!-- Trajectory Arc -->
+  <path d="M 10 38 Q 45 10 82 20" fill="none" stroke="#10b981" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.6"/>
+  <!-- Mini Target Net -->
+  <rect class="net-target" x="82" y="10" width="14" height="20" rx="2" fill="#0d241d" stroke="#10b981" stroke-width="1.2"/>
+  <text x="89" y="24" text-anchor="middle" font-family="ui-monospace, monospace" font-size="9" fill="#34d399">xG</text>
+  <!-- Moving Curving Ball -->
+  <g class="ball-shot">
+    <circle cx="10" cy="38" r="3.5" fill="#ffffff" filter="url(#glowBall)"/>
+  </g>
+</g>
+
+<!-- Status Pill -->
+<rect x="444" y="32" width="128" height="26" rx="13" fill="#081b15" stroke="#10b981" stroke-opacity="0.4"/>
+<circle class="live" cx="458" cy="45" r="3" fill="#10b981"/>
+<text x="468" y="49.5" font-family="ui-monospace, monospace" font-size="11.5" font-weight="600" fill="#34d399">Match Telemetry</text>
+
+<!-- Description -->
+<text y="92" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="14.5" fill="#94a3b8">
+<tspan x="28" dy="0">Spatial event tracking, expected goals (xG), passing networks,</tspan>
+<tspan x="28" dy="22">and player performance radars modeled from matchday event logs.</tspan>
+</text>
+
+<!-- Tech Badges -->
+<rect x="28" y="140" width="86" height="28" rx="14" fill="#0f1923" stroke="#1e2c3d"/><text x="41" y="158.5" font-family="ui-monospace, monospace" font-size="12" fill="#94a3b8">xG Models</text>
+<rect x="120.2" y="140" width="86" height="28" rx="14" fill="#0f1923" stroke="#1e2c3d"/><text x="133.2" y="158.5" font-family="ui-monospace, monospace" font-size="12" fill="#94a3b8">StatsBomb</text>
+<rect x="212.4" y="140" width="70" height="28" rx="14" fill="#0f1923" stroke="#1e2c3d"/><text x="225.4" y="158.5" font-family="ui-monospace, monospace" font-size="12" fill="#94a3b8">Python</text>
+<rect x="288.6" y="140" width="102" height="28" rx="14" fill="#0f1923" stroke="#1e2c3d"/><text x="301.6" y="158.5" font-family="ui-monospace, monospace" font-size="12" fill="#94a3b8">Radar Charts</text>
+<rect x="396.8" y="140" width="96" height="28" rx="14" fill="#0f1923" stroke="#1e2c3d"/><text x="409.8" y="158.5" font-family="ui-monospace, monospace" font-size="12" fill="#94a3b8">Pass Matrix</text>
+
+<text x="572" y="188" text-anchor="end" font-family="ui-monospace, monospace" font-size="11.5" fill="#64748b">github.com/akshaysharma2005/football-analytics ↗</text>
+</svg>
