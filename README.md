@@ -18,8 +18,8 @@ Passionate **football tactician and sports analytics enthusiast** — dissecting
 ### Selected work
 
 <p align="center">
-<a href="https://github.com/akshaysharma2005/SoundPulse"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/soundpulse-dark.svg"><img src="./assets/soundpulse-light.svg" width="49%" alt="SoundPulse — Music Streaming Analytics"></picture></a>&nbsp;<a href="https://github.com/akshaysharma2005/football-analytics"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/football-dark.svg"><img src="./assets/football-light.svg" width="49%" alt="PitchPulse — Football Tactical and xG Analytics"></picture></a>
-<a href="https://github.com/akshaysharma2005/Healthcare-Analytics"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/healthcare-dark.svg"><img src="./assets/healthcare-light.svg" width="49%" alt="Healthcare Data Analysis — HMIS Dataset"></picture></a>&nbsp;<a href="https://github.com/akshaysharma2005"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/cloud-dark.svg"><img src="./assets/cloud-light.svg" width="49%" alt="Cloud Architecture and Full Stack Web Apps"></picture></a>
+<a href="https://soundpulse-1.onrender.com/"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/soundpulse-dark.svg"><img src="./assets/soundpulse-light.svg" width="49%" alt="SoundPulse — Music Streaming Analytics"></picture></a>&nbsp;<a href="https://github.com/akshaysharma2005/football-analytics"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/football-dark.svg"><img src="./assets/football-light.svg" width="49%" alt="PitchPulse — Football Tactical and xG Analytics"></picture></a>
+<a href="https://drive.google.com/file/d/1-LLqf_7I9KnQ3wuPdkXstDBYjI5Mj0wT/view"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/healthcare-dark.svg"><img src="./assets/healthcare-light.svg" width="49%" alt="Healthcare Data Analysis — HMIS Dataset"></picture></a>&nbsp;<a href="https://www.credly.com/badges/b9e4c77d-96ca-4aa7-a0d2-e8e91158c7ed/public_url"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/cloud-dark.svg"><img src="./assets/cloud-light.svg" width="49%" alt="Cloud Architecture and Full Stack Web Apps"></picture></a>
 </p>
 
 ### The Beautiful Game · Football Analytics
@@ -40,4 +40,4 @@ Passionate **football tactician and sports analytics enthusiast** — dissecting
 
 <br/>
 
-**Certifications:** AWS Academy Graduate — Cloud Architecting · AWS Academy Graduate — Cloud Foundations · MERN Full Stack Development (FacePrep, 2025)
+**Certifications:** [AWS Academy Graduate — Cloud Architecting](https://www.credly.com/badges/b9e4c77d-96ca-4aa7-a0d2-e8e91158c7ed/public_url) · [AWS Academy Graduate — Cloud Foundations](https://www.credly.com/badges/b9e4c77d-96ca-4aa7-a0d2-e8e91158c7ed/public_url) · MERN Full Stack Development (FacePrep, 2025)
